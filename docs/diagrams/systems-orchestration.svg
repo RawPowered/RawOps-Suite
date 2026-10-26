@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1440" viewBox="0 0 1600 1440" role="img" aria-labelledby="title desc">
+<title id="title">RawOps Suite systems orchestration</title>
+<desc id="desc">A logical source map. Role-specific workspaces feed training, CRM, samples, orders, legal and product workflows. Shared PHP handlers, automation processors and provider adapters coordinate records and integrations. MySQL persistence and cross-cutting activity reporting support the platform. Lines group capabilities and do not represent a universal event bus or a verified runtime trace.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#D5FF3F" stroke-width="1.5"/></marker></defs>
+<path d="M0 0H1520L1600 80V1440H36L0 1404Z" fill="#090A0B" stroke="#373A3D" stroke-width="2"/>
+<path d="M0 0H520L512 7H0Z" fill="#D5FF3F"/>
+<path d="M1340 0H1420L1320 180H1240ZM1480 0H1520L1600 80V180H1380Z" fill="#151719"/>
+
+<text x="52" y="52" fill="#D5FF3F" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2.4">RAWPOWERED / RAWOPS SUITE</text>
+<text x="48" y="115" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="54" font-weight="700">Systems orchestration</text>
+<text x="52" y="154" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="23" font-weight="400">People, business workflows, shared records and integration handoffs.</text>
+<text x="52" y="206" fill="#D5FF3F" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1.4">01 /</text>
+<text x="113" y="206" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.8">ROLE-SPECIFIC WORKSPACES</text>
+<path d="M52 226H318L340 248V318H52Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M52 226h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="70" y="263" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="23" font-weight="700">Sales agents</text>
+<text x="70" y="293" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="18" font-weight="400">Prospecting • outreach</text>
+<path d="M354 226H620L642 248V318H354Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M354 226h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="372" y="263" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="23" font-weight="700">Customers</text>
+<text x="372" y="293" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="18" font-weight="400">Accounts • requests</text>
+<path d="M656 226H922L944 248V318H656Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M656 226h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="674" y="263" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="23" font-weight="700">Trainees</text>
+<text x="674" y="293" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="18" font-weight="400">Learning • practice</text>
+<path d="M958 226H1224L1246 248V318H958Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M958 226h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="976" y="263" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="23" font-weight="700">Operations / admin</text>
+<text x="976" y="293" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="18" font-weight="400">Fulfillment • oversight</text>
+<path d="M1260 226H1526L1548 248V318H1260Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M1260 226h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="1278" y="263" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="23" font-weight="700">Legal team</text>
+<text x="1278" y="293" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="18" font-weight="400">Case review • evidence</text>
+<path d="M196 318V341" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M498 318V341" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M800 318V341" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M1102 318V341" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M1404 318V341" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M196 341H1404" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M800 341V374" fill="none" stroke="#D5FF3F" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="52" y="365" fill="#AEB3B8" font-family="Arial,sans-serif" font-size="16" font-weight="400">Sign-in context • role checks • request handlers</text>
+<text x="52" y="409" fill="#D5FF3F" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1.4">02 /</text>
+<text x="113" y="409" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.8">CONNECTED BUSINESS WORKFLOWS</text>
+<path d="M52 431H266L288 453V587H52Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M52 431h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="68" y="467" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="21" font-weight="700">Training</text>
+<text x="68" y="502" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Product-aware lessons</text>
+<text x="68" y="530" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Quizzes and progress</text>
+<text x="68" y="558" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Sales workouts</text>
+<path d="M170 587V610" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M304 431H518L540 453V587H304Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M304 431h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="320" y="467" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="21" font-weight="700">CRM</text>
+<text x="320" y="502" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Shop discovery</text>
+<text x="320" y="530" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Leads and accounts</text>
+<text x="320" y="558" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Calls, notes and tasks</text>
+<path d="M422 587V610" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M556 431H770L792 453V587H556Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M556 431h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="572" y="467" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="21" font-weight="700">Samples</text>
+<text x="572" y="502" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Offers and enrollment</text>
+<text x="572" y="530" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Request / fulfillment</text>
+<text x="572" y="558" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Shipment follow-up</text>
+<path d="M674 587V610" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M808 431H1022L1044 453V587H808Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M808 431h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="824" y="467" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="21" font-weight="700">Orders / finance</text>
+<text x="824" y="502" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Invoices and line items</text>
+<text x="824" y="530" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Commissions</text>
+<text x="824" y="558" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Journals and ledgers</text>
+<path d="M926 587V610" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M1060 431H1274L1296 453V587H1060Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M1060 431h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="1076" y="467" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="21" font-weight="700">Legal</text>
+<text x="1076" y="502" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Cases and timelines</text>
+<text x="1076" y="530" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Evidence metadata</text>
+<text x="1076" y="558" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Team assignments</text>
+<path d="M1178 587V610" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M1312 431H1526L1548 453V587H1312Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M1312 431h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="1328" y="467" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="21" font-weight="700">Product / inventory</text>
+<text x="1328" y="502" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Pricing and ingredients</text>
+<text x="1328" y="530" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Recipes and packaging</text>
+<text x="1328" y="558" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="17" font-weight="400">Stock and production</text>
+<path d="M1430 587V610" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M170 610H1430" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M800 610V641" fill="none" stroke="#D5FF3F" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="52" y="674" fill="#D5FF3F" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1.4">03 /</text>
+<text x="113" y="674" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.8">SHARED COORDINATION IN THE APPLICATION</text>
+<path d="M52 696H518L540 718V857H52Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M52 696h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="72" y="736" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="24" font-weight="700">Context and record services</text>
+<text x="72" y="773" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Catalog / account context for AI</text>
+<text x="72" y="801" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Shared record IDs and transactions</text>
+<text x="72" y="829" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Training content and sync helpers</text>
+<path d="M556 696H1022L1044 718V857H556Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M556 696h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="576" y="736" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="24" font-weight="700">Automation processors</text>
+<text x="576" y="773" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Templates, conditions and delays</text>
+<text x="576" y="801" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Scheduled jobs and email queues</text>
+<text x="576" y="829" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Status, callbacks and follow-up</text>
+<path d="M1060 696H1526L1548 718V857H1060Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M1060 696h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="1080" y="736" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="24" font-weight="700">Integration adapters</text>
+<text x="1080" y="773" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Places lookup and result caching</text>
+<text x="1080" y="801" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Model requests and email delivery</text>
+<text x="1080" y="829" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="20" font-weight="400">Publishing and shipping adapters</text>
+<path d="M296 857V885H424V934" fill="none" stroke="#D5FF3F" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M800 857V885H424" fill="none" stroke="#73787D" stroke-width="2"/>
+<path d="M1304 857V885H1460V934" fill="none" stroke="#D5FF3F" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="52" y="918" fill="#D5FF3F" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1.2">RECORD READS / WRITES</text>
+<text x="868" y="918" fill="#D5FF3F" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1.2">PROVIDER REQUESTS / RESPONSES</text>
+<path d="M52 952H770L792 974V1121H52Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<path d="M52 952h55" fill="none" stroke="#D5FF3F" stroke-width="2"/>
+<text x="74" y="994" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="27" font-weight="700">MySQL persistence</text>
+<text x="74" y="1032" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="21" font-weight="400">Accounts • products • orders • workflow state</text>
+<text x="74" y="1064" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="21" font-weight="400">Learning progress • case metadata • activity records</text>
+<text x="74" y="1096" fill="#D5FF3F" font-family="Arial,sans-serif" font-size="17" font-weight="400">145 historical SQL migration files</text>
+<path d="M844 952H1526L1548 974V1121H844Z" fill="#111214" stroke="#73787D" stroke-width="1.5" stroke-dasharray="7 7"/>
+<text x="866" y="994" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="27" font-weight="700">External services</text>
+<text x="866" y="1032" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="21" font-weight="400">Google Places / OAuth • Gemini</text>
+<text x="866" y="1064" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="21" font-weight="400">SendGrid • Printify • shipping services</text>
+<text x="866" y="1096" fill="#AEB3B8" font-family="Arial,sans-serif" font-size="17" font-weight="400">Provider credentials and live status excluded</text>
+<text x="52" y="1170" fill="#D5FF3F" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1.4">04 /</text>
+<text x="113" y="1170" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.8">CROSS-CUTTING CONTROLS AND VISIBILITY</text>
+<path d="M52 1191H1526L1548 1213V1299H52Z" fill="#151719" stroke="#373A3D" stroke-width="1.5"/>
+<text x="74" y="1232" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="22" font-weight="700">Access checks and case membership</text>
+<text x="74" y="1269" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="18" font-weight="400">Route consistency requires restoration review.</text>
+<text x="586" y="1232" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="22" font-weight="700">Time and progress</text>
+<text x="586" y="1269" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="18" font-weight="400">Active / idle sessions • completion</text>
+<text x="1080" y="1232" fill="#F7F8F9" font-family="Arial,sans-serif" font-size="22" font-weight="700">Operational reporting</text>
+<text x="1080" y="1269" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="18" font-weight="400">Lead quality • email events • API use</text>
+<path d="M52 1330H1548" fill="none" stroke="#373A3D" stroke-width="2"/>
+<path d="M52 1362H87" fill="none" stroke="#D5FF3F" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="101" y="1368" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="16" font-weight="400">Work / data path</text>
+<path d="M335 1362H370" fill="none" stroke="#73787D" stroke-width="2"/>
+<text x="384" y="1368" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="16" font-weight="400">Shared capability grouping</text>
+<path d="M737 1362H772" fill="none" stroke="#73787D" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="786" y="1368" fill="#B9BEC2" font-family="Arial,sans-serif" font-size="16" font-weight="400">External provider boundary</text>
+<text x="52" y="1407" fill="#AEB3B8" font-family="Arial,sans-serif" font-size="17" font-weight="400">Logical map of preserved source. Handlers and helpers coordinate the work; lines are not runtime traces.</text>
+</svg>

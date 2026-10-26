@@ -63,7 +63,9 @@ The walkthrough distinguishes captured interface behavior from source-backed cap
 
 <h2 id="scope"><img src="assets/brand/section-scope.svg" alt="Explore the full platform" width="100%"></h2>
 
-<a href="docs/FEATURE-WALKTHROUGH.md"><img src="docs/diagrams/connected-capabilities.svg" alt="Six connected capabilities: educate, assist, acquire, fulfill, organize and measure" width="100%"></a>
+<a href="docs/diagrams/systems-orchestration.png"><img src="docs/diagrams/systems-orchestration.svg" alt="RawOps Suite systems orchestration: role workspaces, business workflows, shared services, MySQL records, external providers and operational visibility" width="100%"></a>
+
+[Open full-resolution diagram](docs/diagrams/systems-orchestration.png) · [Read the architecture and source references](docs/SYSTEMS-ORCHESTRATION.md)
 
 <details>
 <summary><strong>Expand the wider feature inventory</strong></summary>
