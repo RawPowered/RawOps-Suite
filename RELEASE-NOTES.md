@@ -1,6 +1,10 @@
-# RawOps Suite v1.0.0-showcase
+# RawOps Suite v1.0.1-showcase
 
 A preserved source release showing how CRM, sales education, assisted outreach, sample fulfillment, finance and legal operations were connected in one business platform.
+
+## Changes in this release
+
+Removed the disconnected React storefront prototype and its placeholder catalog from the public tree. Updated the README and source guide to focus on the PHP/MySQL operations platform. The application source, historical screenshots and workflow documentation are retained. Earlier commits and the initial release remain historical snapshots.
 
 ## Explore
 

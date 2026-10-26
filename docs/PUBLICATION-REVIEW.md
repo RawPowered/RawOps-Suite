@@ -1,6 +1,6 @@
 # Publication review
 
-Review date: 26 October 2026. Release: v1.0.0-showcase.
+Review date: 26 October 2026. Current release: v1.0.1-showcase.
 
 RawOps Suite is a de-identified historical source archive and portfolio walkthrough. This publication uses a new Git history so excluded private material is absent from the public commit history.
 
@@ -19,7 +19,7 @@ RawOps Suite is a de-identified historical source archive and portfolio walkthro
 - Legacy setup, bypass and cache utilities excluded during release preparation.
 - Shared access-password material and predictable bootstrap passwords.
 - Original development-host references and product-specific field labels.
-- Unused model-key injection into the separate browser interface prototype.
+- The disconnected storefront prototype was removed from the current tree in v1.0.1-showcase. It remains in the earlier historical snapshot; no operational application files depended on it.
 
 Product fields and identifiers were normalized across references. Syntax errors introduced by earlier substitutions were corrected. These are changes in the public adaptation; the original source archive remains separate.
 

@@ -2,7 +2,7 @@
 
 [Portfolio overview](../README.md) · [Feature walkthrough](FEATURE-WALKTHROUGH.md) · [API index](API-INDEX.md)
 
-RawOps Suite preserves a PHP/MySQL business application and a separate React/Vite interface prototype. Start with the workflow relevant to your role, then follow its linked files.
+RawOps Suite preserves the PHP/MySQL business application. Start with the workflow relevant to your role, then follow its linked files.
 
 ## Repository map
 
@@ -17,7 +17,6 @@ RawOps Suite preserves a PHP/MySQL business application and a separate React/Vit
 | scheduled/ | Scheduled email and operational processing |
 | migrations/ | 145 historical SQL files |
 | agent/ and customer/ | Agent cards and customer-facing workspaces |
-| v2/ | Separate React interface prototype |
 | docs/evidence/ | Historical screenshots and their captions |
 
 ## Suggested review

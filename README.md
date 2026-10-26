@@ -112,7 +112,7 @@ The implementation is available for review: **437 PHP files, 33 standalone JavaS
 
 Company/product identity, customer records, private legal content, credentials and runtime configuration are excluded. Screenshots retain historical UI states with opaque redactions. Original evidence files remain private.
 
-The code is a historical source archive. Older provider/model endpoints, migrations and security boundaries require review before restoration. The separate React/Vite directory is an interface prototype. [Source review guide](docs/SOURCE-REVIEW.md) · [Evidence methodology](docs/BUILD-EVIDENCE.md).
+The code is a historical source archive. Older provider/model endpoints, migrations and security boundaries require review before restoration. [Source review guide](docs/SOURCE-REVIEW.md) · [Evidence methodology](docs/BUILD-EVIDENCE.md).
 
-**Source snapshot:** [v1.0.0-showcase](https://github.com/RawPowered/RawOps-Suite/releases/tag/v1.0.0-showcase). The main branch contains the current portfolio presentation. [Rights and reuse](RIGHTS.md).
+**Source snapshot:** [v1.0.1-showcase](https://github.com/RawPowered/RawOps-Suite/releases/tag/v1.0.1-showcase). The main branch contains the current portfolio presentation. [Rights and reuse](RIGHTS.md).
 

@@ -31,3 +31,6 @@ build/
 *.zip
 *.bak
 *.tmp
+
+# Disconnected storefront prototype retained outside the showcase
+/v2/
