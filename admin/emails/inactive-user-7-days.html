@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Product® Account Needs Attention</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f8fafc; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .header { background: linear-gradient(135deg, #f59e0b, #f97316); color: white; padding: 32px 24px; text-align: center; }
+        .header h1 { margin: 0; font-size: 28px; font-weight: 700; }
+        .header p { margin: 8px 0 0; opacity: 0.9; font-size: 16px; }
+        .content { padding: 32px 24px; }
+        .content h2 { color: #1f2937; margin: 0 0 16px; font-size: 24px; }
+        .content p { margin: 0 0 16px; color: #4b5563; font-size: 16px; }
+        .cta-button { display: inline-block; background: #f59e0b; color: white; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; margin: 24px 0; transition: background 0.3s; }
+        .cta-button:hover { background: #d97706; }
+        .warning-box { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 20px; margin: 24px 0; border-left: 4px solid #f59e0b; }
+        .footer { background: #f8fafc; padding: 24px; text-align: center; border-top: 1px solid #e5e7eb; }
+        .footer p { margin: 0; color: #6b7280; font-size: 14px; }
+        .highlight { background: #fef3c7; padding: 2px 6px; border-radius: 4px; color: #92400e; font-weight: 600; }
+        .checklist { background: #f0fdf4; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .checklist ul { margin: 0; padding-left: 20px; }
+        .checklist li { margin: 8px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚠️ Account Reminder</h1>
+            <p>Your Product® account needs your attention</p>
+        </div>
+        
+        <div class="content">
+            <h2>Hi {{first_name}},</h2>
+            
+            <p>It's been <span class="highlight">7 days</span> since you last logged into your Product® account. We want to make sure you don't miss out on important opportunities and updates.</p>
+            
+            <div class="warning-box">
+                <h3 style="margin: 0 0 12px; color: #92400e;">🎯 What You Might Be Missing</h3>
+                <p style="margin: 0;">Regular platform engagement is crucial for:</p>
+                <ul style="margin: 8px 0; padding-left: 20px;">
+                    <li><strong>Training Progress:</strong> New modules and certifications</li>
+                    <li><strong>Commission Tracking:</strong> Recent earnings and payouts</li>
+                    <li><strong>Product Updates:</strong> New inventory and pricing changes</li>
+                    <li><strong>Team Communication:</strong> Important announcements</li>
+                </ul>
+            </div>
+            
+            <div class="checklist">
+                <h3 style="margin: 0 0 12px; color: #059669;">✅ Quick Actions to Take</h3>
+                <ul>
+                    <li>Review any pending training modules</li>
+                    <li>Check your commission dashboard</li>
+                    <li>Update your contact preferences</li>
+                    <li>Connect with your team or mentor</li>
+                </ul>
+            </div>
+            
+            <p>Your success is our priority, and we're here to help you get back on track. Don't let this opportunity slip away!</p>
+            
+            <div style="text-align: center;">
+                <a href="{{login_url}}" class="cta-button">🔥 Get Back in Action</a>
+            </div>
+            
+            <p><strong>Need assistance?</strong> Our support team is standing by to help you succeed. Reply to this email or reach out through your dashboard.</p>
+            
+            <p style="margin-top: 32px;">
+                Best regards,<br>
+                <strong>The Product® Team</strong>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Product® Product. All rights reserved.</p>
+            <p style="margin-top: 8px;">This is an automated reminder. Regular account activity helps maintain your active status.</p>
+        </div>
+    </div>
+    {{#if agent_name}}
+    <div style="max-width:600px;margin:24px auto 0 auto;padding:24px 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;line-height:1.6;">
+        <p style="margin:0 0 6px;font-size:14px;color:#374151;">Need help? Contact your Product sales rep directly:</p>
+        <p style="margin:0;font-size:14px;color:#1f2937;">
+            <strong>{{agent_name}}</strong><br>
+            <span style="color:#64748b;">Sales Representative, Product</span><br>
+            <span style="color:#64748b;">📧 {{agent_email}}</span>{{#if agent_phone}}<br><span style="color:#64748b;">📱 {{agent_phone}}</span>{{/if}}
+        </p>
+    </div>
+    {{/if}}
+    {{tracking_pixel}}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

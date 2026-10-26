@@ -1,0 +1,693 @@
+/**
+ * Sales ACP Core Styles - CONFLICT-FREE VERSION
+ * All classes use sacp_ prefix to prevent global conflicts
+ * @version 2.0.0
+ * @prefix sacp_
+ */
+
+/* ============================================================================
+   CSS CUSTOM PROPERTIES (Safe to use globally)
+   ============================================================================ */
+
+:root {
+    /* Primary Colors */
+    --sacp-white: #ffffff;
+    --sacp-gold: #d4af37;
+    --sacp-gold-light: #e8c85a;
+    --sacp-gold-dark: #b8962d;
+    --sacp-blue: #2563eb;
+    --sacp-blue-deep: #1e3a8a;
+    --sacp-blue-light: #60a5fa;
+    
+    /* Organic & Metal Tones */
+    --sacp-green: #10b981;
+    --sacp-green-light: #34d399;
+    --sacp-silver: #94a3b8;
+    --sacp-platinum: #e2e8f0;
+    --sacp-graphite: #475569;
+    --sacp-carbon: #0f172a;
+    
+    /* Semantic Colors */
+    --sacp-success: #10b981;
+    --sacp-success-bg: #dcfce7;
+    --sacp-warning: #f59e0b;
+    --sacp-warning-bg: #fef3c7;
+    --sacp-danger: #ef4444;
+    --sacp-danger-bg: #fee2e2;
+    --sacp-info: #3b82f6;
+    --sacp-info-bg: #dbeafe;
+    
+    /* Shadows & Effects */
+    --sacp-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+    --sacp-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.12);
+    --sacp-shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.16);
+    --sacp-shadow-xl: 0 24px 48px rgba(15, 23, 42, 0.18);
+    --sacp-shadow-gold: 0 12px 32px rgba(212, 175, 55, 0.25);
+    --sacp-shadow-blue: 0 12px 32px rgba(37, 99, 235, 0.25);
+    
+    --sacp-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Legacy ACP variable mapping for backwards compatibility */
+    --acp-white: var(--sacp-white);
+    --acp-gold: var(--sacp-gold);
+    --acp-gold-light: var(--sacp-gold-light);
+    --acp-gold-dark: var(--sacp-gold-dark);
+    --acp-blue: var(--sacp-blue);
+    --acp-blue-deep: var(--sacp-blue-deep);
+    --acp-blue-light: var(--sacp-blue-light);
+    --acp-green: var(--sacp-green);
+    --acp-green-light: var(--sacp-green-light);
+    --acp-silver: var(--sacp-silver);
+    --acp-platinum: var(--sacp-platinum);
+    --acp-graphite: var(--sacp-graphite);
+    --acp-carbon: var(--sacp-carbon);
+    --acp-success: var(--sacp-success);
+    --acp-success-bg: var(--sacp-success-bg);
+    --acp-warning: var(--sacp-warning);
+    --acp-warning-bg: var(--sacp-warning-bg);
+    --acp-danger: var(--sacp-danger);
+    --acp-danger-bg: var(--sacp-danger-bg);
+    --acp-info: var(--sacp-info);
+    --acp-info-bg: var(--sacp-info-bg);
+    --acp-shadow-sm: var(--sacp-shadow-sm);
+    --acp-shadow-md: var(--sacp-shadow-md);
+    --acp-shadow-lg: var(--sacp-shadow-lg);
+    --acp-shadow-xl: var(--sacp-shadow-xl);
+    --acp-shadow-gold: var(--sacp-shadow-gold);
+    --acp-shadow-blue: var(--sacp-shadow-blue);
+    --acp-transition: var(--sacp-transition);
+    --acp-bg: var(--sacp-white);
+    --acp-text: var(--sacp-carbon);
+    --acp-muted: var(--sacp-graphite);
+    --acp-border: var(--sacp-platinum);
+    --acp-card: var(--sacp-white);
+}
+
+/* ============================================================================
+   LAYOUT & CONTAINER
+   ============================================================================ */
+
+.sacp_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sacp_layout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+}
+
+.sacp_grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 900px) {
+    .sacp_layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .sacp_grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================================
+   CARD COMPONENTS
+   ============================================================================ */
+
+.sacp_card {
+    background: var(--sacp-white);
+    border: 1px solid var(--sacp-platinum);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--sacp-shadow-sm);
+    transition: all var(--sacp-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.sacp_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sacp-gold) 0%, var(--sacp-gold-light) 50%, var(--sacp-gold) 100%);
+    opacity: 0;
+    transition: opacity var(--sacp-transition);
+}
+
+.sacp_card:hover {
+    box-shadow: var(--sacp-shadow-lg);
+    transform: translateY(-2px);
+}
+
+.sacp_card:hover::before {
+    opacity: 1;
+}
+
+.sacp_card-subtle {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid var(--sacp-platinum);
+}
+
+/* Lead Cards with Pulse Effects */
+.sacp_lead-card {
+    background: var(--sacp-white);
+    border: 2px solid var(--sacp-platinum);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: all var(--sacp-transition);
+    position: relative;
+}
+
+.sacp_lead-card-urgent {
+    animation: sacp-pulse-urgent 2s infinite;
+    border-color: var(--sacp-danger);
+}
+
+.sacp_lead-card-attention {
+    animation: sacp-pulse-warning 3s infinite;
+    border-color: var(--sacp-warning);
+}
+
+@keyframes sacp-pulse-urgent {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        transform: scale(1);
+    }
+}
+
+@keyframes sacp-pulse-warning {
+    0% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    }
+}
+
+/* ============================================================================
+   BUTTON COMPONENTS
+   ============================================================================ */
+
+.sacp_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--sacp-blue-deep) 0%, var(--sacp-blue) 100%);
+    color: var(--sacp-white);
+    border: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: var(--sacp-shadow-blue);
+    transition: all var(--sacp-transition);
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.sacp_btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 350ms ease, height 350ms ease;
+}
+
+.sacp_btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.sacp_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.3);
+}
+
+.sacp_btn-secondary {
+    background: var(--sacp-white);
+    color: var(--sacp-blue);
+    border: 2px solid var(--sacp-platinum);
+    box-shadow: var(--sacp-shadow-sm);
+}
+
+.sacp_btn-secondary:hover {
+    border-color: var(--sacp-blue);
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.sacp_btn-gold {
+    background: linear-gradient(135deg, var(--sacp-gold) 0%, var(--sacp-gold-light) 100%);
+    color: var(--sacp-white);
+    box-shadow: var(--sacp-shadow-gold);
+}
+
+.sacp_btn-gold:hover {
+    box-shadow: 0 16px 40px rgba(212, 175, 55, 0.3);
+}
+
+.sacp_btn-success {
+    background: linear-gradient(135deg, var(--sacp-green) 0%, var(--sacp-green-light) 100%);
+}
+
+.sacp_btn-danger {
+    background: linear-gradient(135deg, var(--sacp-danger) 0%, #f87171 100%);
+}
+
+.sacp_btn-warning {
+    background: linear-gradient(135deg, var(--sacp-warning) 0%, #fbbf24 100%);
+}
+
+.sacp_btn-small {
+    padding: 6px 14px;
+    font-size: 12px;
+}
+
+.sacp_btn-large {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+/* ============================================================================
+   CHIP/BADGE COMPONENTS
+   ============================================================================ */
+
+.sacp_chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all var(--sacp-transition);
+}
+
+.sacp_chip-status {
+    background: linear-gradient(135deg, var(--sacp-platinum) 0%, #cbd5e1 100%);
+    color: var(--sacp-graphite);
+    border: 1px solid var(--sacp-silver);
+}
+
+.sacp_chip-success {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    color: #14532d;
+    border: 1px solid #86efac;
+}
+
+.sacp_chip-danger {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: #7f1d1d;
+    border: 1px solid #fca5a5;
+}
+
+.sacp_chip-info {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: var(--sacp-blue-deep);
+    border: 1px solid #93c5fd;
+}
+
+.sacp_chip-gold {
+    background: linear-gradient(135deg, var(--sacp-gold) 0%, var(--sacp-gold-light) 100%);
+    color: var(--sacp-white);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.sacp_chip-urgent {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: var(--sacp-danger);
+    border: 1px solid var(--sacp-danger);
+    animation: sacp-pulse-badge 2s infinite;
+}
+
+.sacp_chip-high {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    color: #92400e;
+    border: 1px solid #fbbf24;
+}
+
+.sacp_chip-medium {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: var(--sacp-blue-deep);
+    border: 1px solid #93c5fd;
+}
+
+.sacp_chip-low {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    color: var(--sacp-graphite);
+    border: 1px solid #d1d5db;
+}
+
+@keyframes sacp-pulse-badge {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* ============================================================================
+   TABLE COMPONENTS
+   ============================================================================ */
+
+.sacp_table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--sacp-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sacp-shadow-sm);
+}
+
+.sacp_table thead {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.sacp_table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--sacp-graphite);
+    border-bottom: 2px solid var(--sacp-platinum);
+}
+
+.sacp_table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--sacp-platinum);
+}
+
+.sacp_table tbody tr {
+    transition: all 150ms ease;
+}
+
+.sacp_table tbody tr:hover {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.sacp_table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+}
+
+/* ============================================================================
+   FORM COMPONENTS
+   ============================================================================ */
+
+.sacp_input {
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--sacp-white);
+    border: 2px solid var(--sacp-platinum);
+    border-radius: 12px;
+    font-size: 14px;
+    color: var(--sacp-carbon);
+    transition: all var(--sacp-transition);
+}
+
+.sacp_input:focus {
+    outline: none;
+    border-color: var(--sacp-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    transform: translateY(-1px);
+}
+
+.sacp_input::placeholder {
+    color: var(--sacp-silver);
+}
+
+.sacp_select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+.sacp_textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ============================================================================
+   STATS & METRICS
+   ============================================================================ */
+
+.sacp_stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.sacp_stat-card {
+    background: var(--sacp-white);
+    border: 1px solid var(--sacp-platinum);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--sacp-transition);
+}
+
+.sacp_stat-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--sacp-gold) 0%, var(--sacp-gold-light) 100%);
+    opacity: 0.05;
+    border-radius: 0 0 0 100%;
+    transition: all var(--sacp-transition);
+}
+
+.sacp_stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sacp-shadow-lg);
+}
+
+.sacp_stat-card:hover::after {
+    opacity: 0.1;
+    width: 70%;
+}
+
+.sacp_stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--sacp-blue-deep);
+    margin-bottom: 4px;
+}
+
+.sacp_stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--sacp-silver);
+    font-weight: 600;
+}
+
+/* ============================================================================
+   UTILITY CLASSES
+   ============================================================================ */
+
+.sacp_text-muted {
+    color: var(--sacp-graphite);
+}
+
+.sacp_text-small {
+    font-size: 12px;
+}
+
+.sacp_text-large {
+    font-size: 18px;
+}
+
+.sacp_text-center {
+    text-align: center;
+}
+
+.sacp_text-right {
+    text-align: right;
+}
+
+.sacp_link-plain {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sacp_skeleton {
+    background: linear-gradient(90deg, var(--sacp-platinum) 25%, #e2e8f0 50%, var(--sacp-platinum) 75%);
+    background-size: 200% 100%;
+    animation: sacp-shimmer 1.5s infinite;
+    border-radius: 12px;
+}
+
+@keyframes sacp-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.sacp_notice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.sacp_empty-state {
+    margin-top: 12px;
+    padding: 12px;
+    background: #f3f4f6;
+    border-radius: 10px;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* Page Header */
+.sacp_page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.sacp_page-title {
+    margin: 0;
+    color: var(--sacp-carbon);
+}
+
+.sacp_page-subtitle {
+    margin-top: 4px;
+    color: var(--sacp-graphite);
+}
+
+.sacp_header-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ============================================================================
+   ANIMATIONS
+   ============================================================================ */
+
+@keyframes sacp-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sacp_fade-in {
+    animation: sacp-fade-in 0.3s ease;
+}
+
+@keyframes sacp-success-check {
+    0% {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+.sacp_success-animation {
+    animation: sacp-success-check 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ============================================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================================ */
+
+@media (max-width: 1024px) {
+    .sacp_container {
+        padding: 16px;
+    }
+    
+    .sacp_stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .sacp_container {
+        padding: 12px;
+    }
+    
+    .sacp_page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .sacp_stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+    }
+    
+    .sacp_card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sacp_btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .sacp_stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+

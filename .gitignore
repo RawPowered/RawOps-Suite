@@ -1,0 +1,33 @@
+# Runtime configuration and private credentials
+.env
+.env.*
+!.env.example
+**/config.php
+**/site_config.json
+**/.admin-setup-lock
+
+# Customer material and generated runtime files
+**/uploads/**
+**/logs/**
+**/error_log
+**/*.log
+**/*.csv
+**/*.pdf
+**/*.docx
+**/evidence-locker/**/*.png
+**/evidence-locker/**/*.jpg
+**/evidence-locker/**/*.jpeg
+**/evidence-locker/**/*.webp
+
+# Local dependencies and build output
+node_modules/
+vendor/
+dist/
+build/
+.cache/
+
+# Backups and database exports
+**/*backup.php
+*.zip
+*.bak
+*.tmp

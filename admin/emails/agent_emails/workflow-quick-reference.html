@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Email Workflow Quick Reference</title>
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8fafc;
+    padding: 20px;
+    margin: 0;
+}
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(15,23,42,0.08);
+    padding: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1 {
+    margin: 0 0 8px;
+    color: #1e293b;
+    font-size: 24px;
+}
+h2 {
+    color: #0369a1;
+    font-size: 18px;
+    margin: 24px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5e7eb;
+}
+h3 {
+    color: #475569;
+    font-size: 16px;
+    margin: 16px 0 8px;
+}
+.step {
+    background: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 6px;
+}
+.step strong {
+    color: #166534;
+}
+.trigger-box {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+}
+.trigger-box h4 {
+    margin: 0 0 8px;
+    color: #1f2937;
+    font-size: 14px;
+}
+.trigger-box p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.highlight {
+    background: #fef3c7;
+    border: 1px solid #fbbf24;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 12px 0;
+}
+.highlight strong {
+    color: #92400e;
+}
+code {
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+    color: #1e293b;
+}
+ul {
+    line-height: 1.8;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🔄 Email Workflow Quick Reference</h1>
+    <p style="color:#64748b;margin-bottom:24px;">Everything you need to know about automated email follow-ups</p>
+    
+    <h2>🚀 Getting Started (3 Steps)</h2>
+    
+    <div class="step">
+        <strong>Step 1:</strong> Go to <code>Sales Portal → Email Workflows</code>
+    </div>
+    
+    <div class="step">
+        <strong>Step 2:</strong> Create a workflow template (e.g., "Unopened - 3 Day Reminder")
+    </div>
+    
+    <div class="step">
+        <strong>Step 3:</strong> When sending emails, select your workflow from dropdown
+    </div>
+    
+    <div class="highlight">
+        <strong>💡 That's it!</strong> The system automatically sends follow-ups based on how recipients interact with your email.
+    </div>
+    
+    <h2>📋 Workflow Trigger Types</h2>
+    
+    <div class="trigger-box">
+        <h4>Unopened</h4>
+        <p><strong>When:</strong> Recipient hasn't opened the email<br>
+        <strong>Best For:</strong> Gentle reminders<br>
+        <strong>Recommended Delay:</strong> 72 hours (3 days)</p>
+    </div>
+    
+    <div class="trigger-box">
+        <h4>Opened but Not Clicked</h4>
+        <p><strong>When:</strong> Email was read but no links clicked<br>
+        <strong>Best For:</strong> Providing more info, answering questions<br>
+        <strong>Recommended Delay:</strong> 120 hours (5 days)</p>
+    </div>
+    
+    <div class="trigger-box">
+        <h4>Clicked but No Action</h4>
+        <p><strong>When:</strong> Clicked links but took no action on website<br>
+        <strong>Best For:</strong> Urgent follow-up, offering help<br>
+        <strong>Recommended Delay:</strong> 48 hours (2 days)</p>
+    </div>
+    
+    <div class="trigger-box">
+        <h4>Clicked but No Sale</h4>
+        <p><strong>When:</strong> Browsed products but didn't buy<br>
+        <strong>Best For:</strong> Addressing concerns, offering incentives<br>
+        <strong>Recommended Delay:</strong> 72 hours (3 days)</p>
+    </div>
+    
+    <div class="trigger-box">
+        <h4>Sale with Agent Follow-up</h4>
+        <p><strong>When:</strong> Customer made a purchase<br>
+        <strong>Best For:</strong> Thank you, relationship building<br>
+        <strong>Recommended Delay:</strong> 24 hours (1 day)</p>
+    </div>
+    
+    <div class="trigger-box">
+        <h4>AI Chat Interaction</h4>
+        <p><strong>When:</strong> Used AI assistant after clicking email<br>
+        <strong>Best For:</strong> Warm lead personal follow-up<br>
+        <strong>Recommended Delay:</strong> 48 hours (2 days)</p>
+    </div>
+    
+    <h2>✨ Three Ways to Use Workflows</h2>
+    
+    <h3>1. Transactional Campaign (One Email)</h3>
+    <ul>
+        <li>Send important email with workflow attached</li>
+        <li>Workflow triggers ONLY for that specific email</li>
+        <li>Perfect for: proposals, demos, important announcements</li>
+    </ul>
+    
+    <h3>2. Reusable Template (Multiple Emails)</h3>
+    <ul>
+        <li>Create workflow template once</li>
+        <li>Attach to any email you send</li>
+        <li>Perfect for: common scenarios, consistent follow-up strategy</li>
+    </ul>
+    
+    <h3>3. Entity-Specific (All Emails to Lead/Account)</h3>
+    <ul>
+        <li>Configure workflows for specific lead/account</li>
+        <li>Applies to ALL future emails to that contact</li>
+        <li>Perfect for: VIP clients, high-value leads, custom timing needs</li>
+    </ul>
+    
+    <h2>🎯 Best Practices</h2>
+    
+    <h3>DO:</h3>
+    <ul>
+        <li>✅ Use AI generation for personalized follow-ups</li>
+        <li>✅ Start with 3-day delays for unopened emails</li>
+        <li>✅ Monitor performance and adjust</li>
+        <li>✅ Use different workflows for different lead types</li>
+        <li>✅ Cancel workflows if you follow up manually</li>
+    </ul>
+    
+    <h3>DON'T:</h3>
+    <ul>
+        <li>❌ Create too many follow-ups (max 3 per email)</li>
+        <li>❌ Use aggressive delays (< 24 hours for unopened)</li>
+        <li>❌ Forget to monitor your active campaigns</li>
+        <li>❌ Leave workflows running if you're handling manually</li>
+    </ul>
+    
+    <h2>📊 Tracking Performance</h2>
+    
+    <p>Go to <strong>Email Workflows → Performance</strong> to see:</p>
+    <ul>
+        <li>How many follow-ups have been sent</li>
+        <li>Open rates per workflow</li>
+        <li>Conversion rates</li>
+        <li>Which workflows work best</li>
+    </ul>
+    
+    <h2>🎓 Example Scenarios</h2>
+    
+    <h3>Scenario: Cold Lead Follow-up</h3>
+    <ol>
+        <li>Send introduction email to cold lead</li>
+        <li>Attach "Unopened - 3 Day" workflow</li>
+        <li>If not opened → AI sends friendly reminder after 3 days</li>
+        <li>If opened but not clicked → Different workflow triggers after 5 days</li>
+        <li>Fully automated nurturing!</li>
+    </ol>
+    
+    <h3>Scenario: Post-Demo Follow-up</h3>
+    <ol>
+        <li>Send demo recap email</li>
+        <li>Attach "Clicked but No Sale" workflow</li>
+        <li>If they browse products → Follow-up offering assistance</li>
+        <li>If they purchase → Thank you email sent automatically</li>
+        <li>Smart automation based on their interest level!</li>
+    </ol>
+    
+    <h3>Scenario: VIP Client Management</h3>
+    <ol>
+        <li>Go to account detail page</li>
+        <li>Click "Configure Follow-up Workflows"</li>
+        <li>Set custom 12-hour delay for unopened</li>
+        <li>Enable time optimization for 10 AM sends</li>
+        <li>All emails to this client now follow VIP timing!</li>
+    </ol>
+    
+    <h2>❓ Common Questions</h2>
+    
+    <h3>Q: Can I cancel a scheduled follow-up?</h3>
+    <p>Yes! Go to <strong>Active Campaigns</strong> tab and click Cancel on any pending follow-up.</p>
+    
+    <h3>Q: What happens if I manually follow up?</h3>
+    <p>You should cancel the automated follow-up to avoid duplicate contact. Better yet, the system is smart - if the lead replies or converts, some workflows auto-cancel.</p>
+    
+    <h3>Q: Can I see what the follow-up will say?</h3>
+    <p>If using AI generation, the content is generated dynamically based on recipient behavior. If using a template, you can preview it in Email Automation.</p>
+    
+    <h3>Q: How many follow-ups will be sent?</h3>
+    <p>Maximum 3 per original email (configurable). Each follow-up can trigger its own workflow if needed.</p>
+    
+    <h3>Q: Can I customize timing per client?</h3>
+    <p>Yes! Use the "Configure Follow-up Workflows" button on any lead/account to set custom delays and send times.</p>
+    
+    <h2>🔗 Quick Links</h2>
+    <ul>
+        <li><a href="/onboarding/sales-agent/email-workflows.php">My Email Workflows Dashboard</a></li>
+        <li><a href="/admin/email-automation-v2.php">Admin Email Automation</a> (if you have access)</li>
+        <li><a href="/admin/email-workflow-manager.php">Full Workflow Manager</a> (admin only)</li>
+    </ul>
+    
+    <hr style="margin:32px 0;border:none;border-top:1px solid #e5e7eb;">
+    
+    <p style="color:#64748b;font-size:12px;text-align:center;">
+        Need help? Contact your admin or check the integration guide for technical details.
+    </p>
+</div>
+
+</body>
+</html>
+
+
+
+
+

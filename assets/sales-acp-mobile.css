@@ -1,0 +1,628 @@
+/* Paladin Theme - Mobile Responsive Design System */
+/* Comprehensive responsive patterns for all device sizes */
+
+/* =================================
+   BREAKPOINTS & DEVICE SUPPORT
+   ================================= */
+/* 
+  - Mobile Small: 320px - 480px (iPhone SE, older phones)
+  - Mobile Large: 480px - 640px (modern phones)
+  - Tablet Small: 640px - 768px (iPad Mini)
+  - Tablet Large: 768px - 1024px (iPad, tablets)
+  - Laptop: 1024px - 1280px (small laptops)
+  - Desktop: 1280px - 1920px (desktops)
+  - Wide: 1920px+ (large monitors)
+*/
+
+/* =================================
+   MOBILE FIRST BASE STYLES
+   ================================= */
+
+/* Ensure proper viewport behavior */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+/* Container responsive widths */
+.container {
+    width: 100%;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 24px;
+        max-width: 1400px;
+    }
+}
+
+/* =================================
+   NAVIGATION RESPONSIVE
+   ================================= */
+
+/* Main site header suppression and handle on ACP pages */
+@media (max-width: 1024px) {
+    body.in-acp .site-header.is-sticky { position: static !important; }
+    body.in-acp .site-header {
+        transition: transform 250ms ease, opacity 200ms ease;
+        will-change: transform;
+        position: relative;
+        z-index: 100 !important; /* Keep main header under ACP nav */
+    }
+    body.in-acp .site-header.is-collapsed {
+        transform: translateY(-85%);
+        opacity: 0.3;
+        pointer-events: none; /* Prevent accidental menu opens while collapsed */
+    }
+    /* Ensure any site menu panels remain below ACP nav on ACP pages */
+    body.in-acp .site-header [role="menu"],
+    body.in-acp .site-header .menu,
+    body.in-acp .site-header .menu-panel,
+    body.in-acp .site-header .dropdown,
+    body.in-acp .site-header .dropdown-menu {
+        position: relative;
+        z-index: 110 !important;
+    }
+    /* Handle tab */
+    /* Disabled on ACP pages per new unified menu hub */
+    .acp-header-handle { display:none !important; }
+    .acp-header-handle .dot {
+        width: 6px; height: 6px; border-radius: 50%; background: #f59e0b;
+        box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
+    }
+}
+
+/* Mobile Navigation (< 768px) */
+@media (max-width: 767px) {
+    .sacp_nav {
+        height: auto;
+        min-height: 56px;
+        padding: 8px 12px;
+        margin: -16px -16px 20px -16px;
+        flex-wrap: wrap;
+    }
+    
+    .sacp_nav .sacp_brand {
+        font-size: 16px;
+        flex: 1;
+    }
+    
+    .sacp_nav .sacp_brand::before {
+        font-size: 20px;
+    }
+    
+    .sacp_nav .sacp_links {
+        display: none !important;
+    }
+    
+    .sacp_nav .sacp_overflow {
+        display: block !important;
+        order: 2;
+    }
+    
+    .sacp_overflow-btn {
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .sacp_overflow-menu {
+        position: fixed !important;
+        top: 60px !important;
+        right: 12px !important;
+        left: 12px !important;
+        width: auto !important;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        z-index: 10020;
+        border-radius: 12px !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    .sacp_overflow-menu .sacp_link {
+        display: block;
+        padding: 12px 16px !important;
+        font-size: 15px;
+        border-bottom: 1px solid var(--acp-platinum);
+    }
+    
+    .sacp_nav .sacp_user {
+        order: 3;
+        width: 100%;
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid var(--acp-platinum);
+        justify-content: space-between;
+    }
+    
+    .sacp_user-info {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .sacp_user-role {
+        display: none !important;
+    }
+    
+    .sacp_admin-toggle {
+        font-size: 10px !important;
+        padding: 4px 8px !important;
+    }
+}
+
+/* Tablet Navigation (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sacp_nav {
+        padding: 10px 16px;
+    }
+    
+    .sacp_nav .sacp_brand {
+        font-size: 18px;
+    }
+    
+    .sacp_nav .sacp_link {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .sacp_nav .sacp_links {
+        gap: 2px;
+        padding: 0 16px;
+    }
+    
+    .sacp_user-info {
+        display: none;
+    }
+}
+
+/* =================================
+   CARDS & CONTENT RESPONSIVE
+   ================================= */
+
+/* Mobile Cards */
+@media (max-width: 640px) {
+    .sacp_card {
+        padding: 16px !important;
+        margin-bottom: 12px;
+        border-radius: 12px !important;
+    }
+    
+    .sacp_stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    
+    .sacp_stat-card {
+        padding: 16px !important;
+    }
+    
+    .sacp_stat-value {
+        font-size: 24px !important;
+    }
+    
+    /* Stack all grids on mobile */
+    .grid, .grid-2, [style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Lead cards mobile optimization */
+    .sacp_lead-card {
+        padding: 12px !important;
+    }
+    
+    .sacp_lead-card > div {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    
+    .sacp_lead-card > div > div:last-child {
+        margin-top: 12px;
+        display: flex;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .sacp_lead-card .btn {
+        flex: 1;
+        text-align: center;
+        padding: 8px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* Tablet Cards */
+@media (min-width: 641px) and (max-width: 1023px) {
+    .sacp_stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* =================================
+   BUTTONS RESPONSIVE
+   ================================= */
+
+/* Touch-friendly buttons on mobile */
+@media (max-width: 768px) {
+    .btn, .sacp_btn {
+        min-height: 44px;
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+    }
+    
+    .btn.small, .sacp_btn-sm {
+        min-height: 36px;
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+    }
+    
+    /* Button groups stack on mobile */
+    .btn-group, .header-actions, .toolbar {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn, .header-actions .btn, .toolbar .btn {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+
+/* =================================
+   TABLES RESPONSIVE
+   ================================= */
+
+/* Responsive tables with horizontal scroll */
+@media (max-width: 768px) {
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -16px;
+        padding: 0 16px;
+    }
+    
+    table, .paladin-table {
+        min-width: 600px;
+        font-size: 13px;
+    }
+    
+    th, td {
+        padding: 8px !important;
+        white-space: nowrap;
+    }
+}
+
+/* Card-based table for mobile */
+@media (max-width: 640px) {
+    .mobile-table-cards table {
+        display: none;
+    }
+    
+    .mobile-table-card {
+        background: var(--acp-white);
+        border: 1px solid var(--acp-platinum);
+        border-radius: 12px;
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .mobile-table-card-header {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--acp-platinum);
+    }
+    
+    .mobile-table-card-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+        font-size: 13px;
+    }
+    
+    .mobile-table-card-label {
+        color: var(--acp-graphite);
+        font-weight: 500;
+    }
+    
+    .mobile-table-card-value {
+        color: var(--acp-carbon);
+        text-align: right;
+    }
+}
+
+/* =================================
+   FORMS RESPONSIVE
+   ================================= */
+
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    input, select, textarea, .paladin-input, .paladin-select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        padding: 12px !important;
+        min-height: 44px;
+    }
+    
+    label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    /* Stack form actions */
+    .form-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}
+
+/* =================================
+   MODALS & OVERLAYS RESPONSIVE
+   ================================= */
+
+@media (max-width: 640px) {
+    .modal, .paladin-modal {
+        width: calc(100% - 32px) !important;
+        margin: 16px !important;
+        max-height: calc(100vh - 32px) !important;
+    }
+    
+    .modal-header, .paladin-modal-header {
+        padding: 16px !important;
+    }
+    
+    .modal-body, .paladin-modal-body {
+        padding: 16px !important;
+    }
+    
+    .modal-footer, .paladin-modal-footer {
+        padding: 16px !important;
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+
+/* =================================
+   PAGE HEADERS RESPONSIVE
+   ================================= */
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 12px;
+    }
+    
+    .page-header h1, .page-title {
+        font-size: 24px !important;
+        margin-bottom: 4px;
+    }
+    
+    .page-header .header-actions {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .page-header .header-actions .btn {
+        flex: 1;
+        min-width: calc(50% - 4px);
+    }
+}
+
+/* =================================
+   CHIPS & BADGES RESPONSIVE
+   ================================= */
+
+@media (max-width: 640px) {
+    .chip, .badge, .sacp_badge {
+        font-size: 10px !important;
+        padding: 2px 6px !important;
+    }
+    
+    .chip-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+}
+
+/* =================================
+   QUICK ACTIONS RESPONSIVE
+   ================================= */
+
+@media (max-width: 768px) {
+    .quick-actions {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--acp-white);
+        border-top: 1px solid var(--acp-platinum);
+        padding: 12px;
+        display: flex;
+        gap: 8px;
+        z-index: 100;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .quick-actions .btn {
+        flex: 1;
+        font-size: 12px !important;
+        padding: 10px 8px !important;
+    }
+    
+    /* Add padding to bottom of container to avoid overlap */
+    .container {
+        padding-bottom: 80px !important;
+    }
+}
+
+/* =================================
+   UTILITY CLASSES
+   ================================= */
+
+/* Hide on mobile */
+@media (max-width: 640px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Hide on tablet */
+@media (min-width: 641px) and (max-width: 1023px) {
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+/* Hide on desktop */
+@media (min-width: 1024px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Show only on mobile */
+.show-mobile {
+    display: none !important;
+}
+
+@media (max-width: 640px) {
+    .show-mobile {
+        display: block !important;
+    }
+    
+    .show-mobile-flex {
+        display: flex !important;
+    }
+}
+
+/* =================================
+   TOUCH OPTIMIZATIONS
+   ================================= */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Touch devices - increase tap targets */
+    a, button, .btn, .sacp_link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .sacp_card:hover {
+        transform: none !important;
+        box-shadow: var(--acp-shadow-sm) !important;
+    }
+    
+    /* Add active states for better feedback */
+    .btn:active, .sacp_link:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+}
+
+/* =================================
+   LANDSCAPE OPTIMIZATIONS
+   ================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .sacp_nav {
+        position: relative;
+        height: auto;
+        min-height: 48px;
+    }
+    
+    .sacp_overflow-menu {
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+    
+    .modal {
+        max-height: calc(100vh - 20px);
+        overflow-y: auto;
+    }
+}
+
+/* =================================
+   PRINT STYLES
+   ================================= */
+
+@media print {
+    .sacp_nav,
+    .quick-actions,
+    .header-actions,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .sacp_card {
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+}
+
+/* =================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================= */
+
+/* Reduce animations on low-power devices */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Dark mode support for future */
+@media (prefers-color-scheme: dark) {
+    /* Future dark mode styles */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .sacp_card,
+    .btn,
+    .chip {
+        border-width: 2px !important;
+    }
+}

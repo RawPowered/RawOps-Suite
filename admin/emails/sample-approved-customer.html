@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Product Sample is On Its Way!</title>
+  <style>
+    @media screen and (max-width: 640px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 20px !important; padding-right: 20px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#f5f7fb; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#f5f7fb;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="container" style="width:600px; background-color:#ffffff; border-radius:12px; box-shadow:0 2px 8px rgba(16,24,40,0.06);">
+          <!-- Header -->
+          <tr>
+            <td align="center" style="padding: 32px 32px 0;">
+              <img src="{{base_url}}/assets/logo.svg" alt="Product" width="160" style="display:block;">
+            </td>
+          </tr>
+          
+          <!-- Celebration -->
+          <tr>
+            <td align="center" style="padding: 32px;">
+              <div style="font-size: 48px; margin-bottom: 16px;">🎉</div>
+              <h1 style="margin: 0 0 12px; font-size: 28px; color: #059669; font-weight: 700;">
+                Great News, {recipient_name}!
+              </h1>
+              <p style="margin: 0; font-size: 16px; color: #6b7280; line-height: 1.6;">
+                Your Product sample has been approved and is on its way!
+              </p>
+            </div>
+          </tr>
+          
+          <!-- Sample Details -->
+          <tr>
+            <td style="padding: 0 32px 24px;">
+              <div style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-left: 4px solid #059669; padding: 20px; border-radius: 8px;">
+                <h2 style="margin: 0 0 16px; font-size: 18px; color: #047857;">Sample Details</h2>
+                <p style="margin: 0 0 8px; color: #065f46;"><strong>Product:</strong> {product_name}</p>
+                <p style="margin: 0 0 8px; color: #065f46;"><strong>Requested by:</strong> {agent_name}</p>
+                {tracking_info}
+              </div>
+            </td>
+          </tr>
+          
+          <!-- What to Expect -->
+          <tr>
+            <td style="padding: 0 32px 24px;">
+              <h3 style="margin: 0 0 12px; font-size: 18px; color: #1f2937;">What to Expect</h3>
+              <p style="margin: 0 0 12px; color: #374151; line-height: 1.6;">
+                {delivery_info}Once it arrives, we recommend:
+              </p>
+              <ul style="margin: 0; padding-left: 20px; color: #374151; line-height: 1.8;">
+                <li>Store in a cool, dry place</li>
+                <li>Start with the recommended serving size</li>
+                <li>Keep track of your experience</li>
+              </ul>
+            </td>
+          </tr>
+          
+          <!-- Agent Contact -->
+          <tr>
+            <td style="padding: 0 32px 32px;">
+              <div style="background: #eff6ff; padding: 20px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                <h3 style="margin: 0 0 12px; font-size: 16px; color: #1e40af;">Questions?</h3>
+                <p style="margin: 0 0 8px; color: #1e3a8a;">
+                  Your sales representative <strong>{agent_name}</strong> is here to help!
+                </p>
+                <p style="margin: 0; color: #1e3a8a;">
+                  📧 {agent_email}<br>
+                  📱 {agent_phone}
+                </p>
+              </div>
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 24px 32px 32px; border-top: 1px solid #e5e7eb;">
+              <p style="margin: 0; font-size: 13px; color: #6b7280;">
+                Thank you for choosing Product
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  {{tracking_pixel}}
+</body>
+</html>
+
+
+
+

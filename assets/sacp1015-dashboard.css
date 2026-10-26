@@ -1,0 +1,896 @@
+/**
+ * SACP Dashboard Enhanced Views
+ * Styles for tabbed interface, Kanban view, and geographic breakdown
+ * 
+ * @version 1.0.0
+ * @prefix sacp1015_
+ */
+
+/* ========================================
+   Performance Stats Grid - Professional Edition
+   ======================================== */
+.sacp1015_perf-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+    animation: sacp1015_fadeIn 0.4s ease;
+}
+
+.sacp1015_perf-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.sacp1015_perf-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sacp1015_perf-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: #3b82f6;
+}
+
+.sacp1015_perf-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Variants - Subtle, Professional */
+.sacp1015_perf-card-success {
+    border-left: 3px solid #10b981;
+}
+
+.sacp1015_perf-card-success:hover {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #ffffff, #f0fdf4);
+}
+
+.sacp1015_perf-card-warning {
+    border-left: 3px solid #f59e0b;
+}
+
+.sacp1015_perf-card-warning:hover {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #ffffff, #fffbeb);
+}
+
+.sacp1015_perf-card-muted {
+    opacity: 0.7;
+}
+
+.sacp1015_perf-card-muted:hover {
+    opacity: 1;
+}
+
+.sacp1015_perf-card-primary {
+    border: 2px solid #3b82f6;
+    background: linear-gradient(135deg, #ffffff, #eff6ff);
+}
+
+.sacp1015_perf-card-primary:hover {
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2);
+}
+
+/* Status-based Detail Quality Card */
+.sacp1015_perf-card-critical {
+    border-color: #dc2626;
+    background: linear-gradient(135deg, #ffffff, #fef2f2);
+}
+
+.sacp1015_perf-card-low {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #ffffff, #fffbeb);
+}
+
+.sacp1015_perf-card-fair {
+    border-color: #eab308;
+    background: linear-gradient(135deg, #ffffff, #fefce8);
+}
+
+.sacp1015_perf-card-optimal {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #ffffff, #f0fdf4);
+}
+
+.sacp1015_perf-icon {
+    font-size: 24px;
+    color: #3b82f6;
+    margin-bottom: 12px;
+    line-height: 1;
+    display: block;
+}
+
+.sacp1015_perf-card-success .sacp1015_perf-icon {
+    color: #10b981;
+}
+
+.sacp1015_perf-card-warning .sacp1015_perf-icon {
+    color: #f59e0b;
+}
+
+.sacp1015_perf-card-muted .sacp1015_perf-icon {
+    color: #9ca3af;
+}
+
+.sacp1015_perf-card-critical .sacp1015_perf-icon,
+.sacp1015_perf-card-low .sacp1015_perf-icon,
+.sacp1015_perf-card-fair .sacp1015_perf-icon,
+.sacp1015_perf-card-optimal .sacp1015_perf-icon {
+    color: inherit;
+}
+
+.sacp1015_perf-card-critical .sacp1015_perf-icon { color: #dc2626; }
+.sacp1015_perf-card-low .sacp1015_perf-icon { color: #f59e0b; }
+.sacp1015_perf-card-fair .sacp1015_perf-icon { color: #eab308; }
+.sacp1015_perf-card-optimal .sacp1015_perf-icon { color: #10b981; }
+
+.sacp1015_perf-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.sacp1015_perf-label {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.sacp1015_perf-status {
+    font-size: 10px;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sacp1015_perf-card-critical .sacp1015_perf-status { color: #dc2626; }
+.sacp1015_perf-card-low .sacp1015_perf-status { color: #f59e0b; }
+.sacp1015_perf-card-fair .sacp1015_perf-status { color: #eab308; }
+.sacp1015_perf-card-optimal .sacp1015_perf-status { color: #10b981; }
+
+.sacp1015_perf-sublabel {
+    font-size: 10px;
+    color: #6b7280;
+    font-weight: 600;
+    margin-top: 6px;
+    line-height: 1.2;
+}
+
+.sacp1015_perf-subvalue {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+/* ========================================
+   Tabbed Interface
+   ======================================== */
+.sacp1015_tab-container {
+    margin-top: 24px;
+}
+
+.sacp1015_tab-nav {
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sacp1015_tab-btn {
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+    position: relative;
+    bottom: -2px;
+}
+
+.sacp1015_tab-btn:hover {
+    color: #111827;
+    background: #f9fafb;
+}
+
+.sacp1015_tab-btn.active {
+    color: #3b82f6;
+    border-bottom-color: #3b82f6;
+}
+
+.sacp1015_tab-content {
+    min-height: 400px;
+}
+
+.sacp1015_tab-pane {
+    display: none;
+    animation: sacp1015_fadeIn 0.3s ease;
+}
+
+.sacp1015_tab-pane.active {
+    display: block;
+}
+
+/* Override responsive-grid gaps in tabs */
+.sacp1015_tab-pane .responsive-grid {
+    gap: 0 !important;
+    margin: 0 !important;
+}
+
+.sacp1015_tab-pane .sacp_card {
+    margin: 0 !important;
+}
+
+.sacp1015_tab-pane {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sacp1015_tab-content > .sacp1015_tab-pane {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Force remove all spacing from sacp_card in tabs - CRITICAL OVERRIDES */
+.sacp1015_tab-pane .sacp_card,
+.sacp1015_tab-pane > .sacp_card,
+.sacp1015_tab-pane div.sacp_card,
+div.sacp1015_tab-pane .sacp_card,
+div.sacp1015_tab-pane > .sacp_card,
+#sacp1015_tab-leads .sacp_card,
+#sacp1015_tab-accounts .sacp_card,
+#sacp1015_tab-activity .sacp_card,
+#sacp1015_tab-kanban .sacp_card,
+#sacp1015_tab-geographic .sacp_card {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Override any card gaps - only direct children */
+.sacp1015_tab-content > .sacp1015_tab-pane > .sacp_card,
+.sacp1015_tab-content > .sacp1015_tab-pane > .card {
+    margin: 0 !important;
+}
+
+.sacp1015_tab-pane + .sacp1015_tab-pane {
+    margin-top: 0 !important;
+}
+
+/* Ensure no padding on tab content wrapper */
+.sacp1015_tab-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Mobile: Convert tabs to dropdown */
+@media (max-width: 640px) {
+    .sacp1015_tab-nav {
+        display: none;
+    }
+    
+    .sacp1015_tab-select {
+        display: block !important;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        background: white;
+    }
+}
+
+.sacp1015_tab-select {
+    display: none;
+}
+
+/* ========================================
+   Kanban View
+   ======================================== */
+.sacp1015_kanban-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.sacp1015_kanban-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+}
+
+/* Horizontal scroll for many columns */
+@media (min-width: 768px) {
+    .sacp1015_kanban-grid {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .sacp1015_kanban-column {
+        flex: 0 0 300px;
+        min-width: 300px;
+    }
+}
+
+.sacp1015_kanban-column {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sacp1015_kanban-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.sacp1015_kanban-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.sacp1015_kanban-count {
+    background: #111827;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sacp1015_kanban-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.sacp1015_kanban-stage-group {
+    border-left: 3px solid #d1d5db;
+    padding-left: 12px;
+}
+
+.sacp1015_kanban-stage-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sacp1015_kanban-leads {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sacp1015_kanban-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sacp1015_kanban-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: #3b82f6;
+}
+
+.sacp1015_kanban-card-header {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.sacp1015_kanban-card-meta {
+    font-size: 12px;
+    color: #6b7280;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sacp1015_kanban-empty {
+    text-align: center;
+    padding: 32px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* Status Kanban specific - tag groups within status columns */
+.sacp1015_status-kanban-tag-group {
+    border-left: 3px solid #d1d5db;
+    padding-left: 12px;
+    margin-bottom: 12px;
+}
+
+.sacp1015_status-kanban-tag-group:last-child {
+    margin-bottom: 0;
+}
+
+/* Converted/Active Account Cards */
+.sacp1015_kanban-card-converted {
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+    border: 2px solid #10b981 !important;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+}
+
+.sacp1015_kanban-card-converted:hover {
+    background: linear-gradient(135deg, #d1fae5 0%, #dcfce7 100%);
+    border-color: #059669 !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.sacp1015_account-badge {
+    display: inline-block;
+    background: #10b981;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   Geographic View
+   ======================================== */
+.sacp1015_geo-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.sacp1015_geo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sacp1015_geo-state {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.sacp1015_geo-state-header {
+    padding: 16px;
+    background: linear-gradient(135deg, #f9fafb, #ffffff);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sacp1015_geo-state-header:hover {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.sacp1015_geo-state-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sacp1015_geo-state-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: #111827;
+}
+
+.sacp1015_geo-state-count {
+    background: #3b82f6;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sacp1015_geo-state-funnel {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.sacp1015_geo-stage-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.sacp1015_geo-stage-mini-count {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sacp1015_geo-stage-mini-label {
+    font-size: 9px;
+    color: #6b7280;
+}
+
+.sacp1015_geo-cities {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: #f9fafb;
+}
+
+.sacp1015_geo-cities.expanded {
+    max-height: 5000px;
+    padding: 16px;
+}
+
+.sacp1015_geo-city-section {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+.sacp1015_geo-city-header {
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #ffffff, #f9fafb);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sacp1015_geo-city-header:hover {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+}
+
+.sacp1015_geo-city-name {
+    font-weight: 700;
+    color: #111827;
+    font-size: 15px;
+}
+
+.sacp1015_geo-city-count {
+    background: #3b82f6;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sacp1015_geo-city-kanban {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.sacp1015_geo-city-kanban.expanded {
+    max-height: 3000px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sacp1015_geo-stage-column {
+    flex: 0 0 280px;
+    min-width: 280px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sacp1015_geo-stage-header {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sacp1015_geo-count-badge {
+    margin-left: auto;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sacp1015_geo-leads-list {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.sacp1015_geo-lead-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.2s ease;
+}
+
+.sacp1015_geo-lead-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: #3b82f6;
+}
+
+/* ========================================
+   Map Container
+   ======================================== */
+.sacp1015_map-container {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+#sacp1015_map-inline-wrapper {
+    margin: 20px 0 !important;
+}
+
+#sacp1015_map-inline {
+    margin: 0 !important;
+}
+
+.sacp1015_map-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.sacp1015_map-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background: #f9fafb;
+    color: #6b7280;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ========================================
+   Collapsible Sections
+   ======================================== */
+.sacp1015_collapsible {
+    transition: all 0.3s ease;
+}
+
+.sacp1015_collapsible.collapsed .sacp1015_collapsible-content {
+    display: none;
+}
+
+.sacp1015_collapsible-toggle {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.sacp1015_collapsible-toggle:hover {
+    background: #eff6ff;
+}
+
+.sacp1015_collapsible-icon {
+    transition: transform 0.3s ease;
+}
+
+.sacp1015_collapsible.collapsed .sacp1015_collapsible-icon {
+    transform: rotate(-90deg);
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+@keyframes sacp1015_fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes sacp1015_slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.sacp1015_loading-spinner {
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: sacp1015_spin 1s linear infinite;
+}
+
+@keyframes sacp1015_spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   Mobile Responsive
+   ======================================== */
+@media (max-width: 768px) {
+    .sacp1015_perf-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .sacp1015_perf-value {
+        font-size: 24px;
+    }
+    
+    .sacp1015_kanban-filters,
+    .sacp1015_geo-controls {
+        flex-direction: column;
+    }
+    
+    .sacp1015_map-container {
+        height: 400px;
+    }
+    
+    .sacp1015_geo-state-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .sacp1015_geo-state-funnel {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .sacp1015_geo-stage-column {
+        flex: 0 0 240px;
+        min-width: 240px;
+    }
+    
+    .sacp1015_geo-city-kanban.expanded {
+        padding: 12px;
+        gap: 12px;
+    }
+}
+
+/* ========================================
+   No CLS (Cumulative Layout Shift Prevention)
+   ======================================== */
+.sacp1015_skeleton {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: sacp1015_shimmer 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes sacp1015_shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Reserve space for async content */
+.sacp1015_tab-pane[data-loaded="false"] {
+    min-height: 400px;
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.sacp1015_hidden {
+    display: none !important;
+}
+
+.sacp1015_loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.sacp1015_error {
+    background: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.sacp1015_success {
+    background: #d1fae5;
+    border: 1px solid #10b981;
+    color: #065f46;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Access Approved</title>
+</head>
+<body style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background-color:#f8fafc;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8fafc;padding:40px 20px;">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);overflow:hidden;">
+                    <!-- Header -->
+                    <tr>
+                        <td style="background:linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);padding:40px 30px;text-align:center;">
+                            <h1 style="margin:0;color:#ffffff;font-size:28px;font-weight:800;">Product<sup style="font-size:0.5em;">®</sup> Legal Management</h1>
+                            <p style="margin:10px 0 0 0;color:rgba(255,255,255,0.9);font-size:16px;">Your Access Has Been Approved</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding:40px 30px;">
+                            <p style="margin:0 0 20px 0;color:#0f172a;font-size:16px;line-height:1.6;">
+                                Hello <strong>{{first_name}}</strong>,
+                            </p>
+                            
+                            <p style="margin:0 0 20px 0;color:#475569;font-size:15px;line-height:1.7;">
+                                Your request for access to the Product Legal Management System has been <strong style="color:#10b981;">approved</strong>. You now have secure access to your assigned case materials and team collaboration tools.
+                            </p>
+                            
+                            <div style="background:#eff6ff;border-left:4px solid #1d4ed8;padding:20px;margin:24px 0;border-radius:8px;">
+                                <p style="margin:0 0 12px 0;color:#1e40af;font-weight:600;font-size:15px;">Your Login Credentials</p>
+                                <p style="margin:0 0 8px 0;color:#1e40af;"><strong>Username:</strong> {{username}}</p>
+                                <p style="margin:0;color:#1e40af;"><strong>Password:</strong> (Set during registration)</p>
+                            </div>
+                            
+                            <div style="text-align:center;margin:32px 0;">
+                                <a href="{{login_url}}" style="display:inline-block;background:linear-gradient(135deg, #1e3a8a, #3b82f6);color:#ffffff;text-decoration:none;padding:16px 40px;border-radius:8px;font-weight:600;font-size:16px;box-shadow:0 8px 20px rgba(30,58,138,0.3);">
+                                    Access Legal Portal
+                                </a>
+                            </div>
+                            
+                            <div style="background:#fef3c7;border:1px solid #fbbf24;padding:18px;border-radius:8px;margin:24px 0;">
+                                <p style="margin:0 0 10px 0;color:#92400e;font-weight:600;font-size:14px;">⚠️ Security Reminder</p>
+                                <p style="margin:0;color:#78350f;font-size:14px;line-height:1.6;">
+                                    Your access is logged and monitored for security purposes. All case materials are confidential and subject to attorney-client privilege. Do not share your credentials or forward case information to unauthorized parties.
+                                </p>
+                            </div>
+                            
+                            <p style="margin:24px 0 0 0;color:#64748b;font-size:14px;line-height:1.6;">
+                                If you have any questions or need assistance, please contact your case administrator.
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background:#f8fafc;padding:30px;text-align:center;border-top:1px solid #e2e8f0;">
+                            <p style="margin:0 0 8px 0;color:#94a3b8;font-size:13px;">
+                                <strong>Product® Legal Management Systems</strong>
+                            </p>
+                            <p style="margin:0;color:#cbd5e1;font-size:12px;">
+                                Enterprise Legal Technology • Secure • Compliant • Confidential
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+  {{#if agent_name}}
+  <div style="max-width:600px;margin:24px auto 0 auto;padding:24px 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;line-height:1.6;">
+    <p style="margin:0 0 6px;font-size:14px;color:#374151;">Need help? Contact your Product sales rep directly:</p>
+    <p style="margin:0;font-size:14px;color:#1f2937;">
+      <strong>{{agent_name}}</strong><br>
+      <span style="color:#64748b;">Sales Representative, Product</span><br>
+      <span style="color:#64748b;">📧 {{agent_email}}</span>{{#if agent_phone}}<br><span style="color:#64748b;">📱 {{agent_phone}}</span>{{/if}}
+    </p>
+  </div>
+  {{/if}}
+  {{tracking_pixel}}
+</body>
+</html>

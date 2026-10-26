@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product.example Ecosystem Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .step-connector {
+            flex-grow: 1;
+            height: 4px;
+            background-color: #E5E7EB;
+        }
+        .step-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 80px;
+        }
+        .step-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: white;
+            background-color: #059669;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .flow-item {
+            background-color: white;
+            border: 2px solid #059669;
+            color: #059669;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            min-width: 120px;
+        }
+        .flow-arrow {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #0D9488;
+            align-self: center;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-8 shadow-lg">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">The product.example Ecosystem</h1>
+            <p class="text-xl md:text-2xl opacity-90">A Unified Platform for Wellness, Lifestyle & Ambition</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Vision: The "Lock-In" Lifestyle Brand</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Product is pivoting to a social-first marketing strategy focused entirely on wellness, health, and a high-performance lifestyle. We are moving beyond products to build a brand that resonates with the "Lock-In" culture: individuals driven by success, fitness, and personal growth. Our platform is the destination for those who want to feel good, look good, and achieve their best.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-emerald-700 mb-4">Target Audience Profile</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our core demographic is a synergy of ambitious, health-conscious groups. This chart illustrates the primary segments of the "Lock-In" community we are engaging.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold text-emerald-600">Fitness & Athletes:</span> Seeking performance and recovery.</li>
+                        <li><span class="font-semibold text-teal-600">Students & Professionals:</span> Prioritizing focus and success.</li>
+                        <li><span class="font-semibold text-yellow-500">Aspirational Achievers:</span> Investing in self-improvement.</li>
+                        <li><span class="font-semibold text-gray-600">Health-Conscious Aging:</span> Focused on longevity and vitality.</li>
+                    </ul>
+                </div>
+                <div class="chart-container">
+                    <canvas id="audienceChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">The Virtuous Ecosystem Cycle</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                product.example is more than a marketplace; it's a self-sustaining B2B2C ecosystem. Each participant feeds into the success of the others, creating a virtuous cycle of growth, quality, and opportunity. This flow is the engine of our platform.
+            </p>
+            <div class="flex flex-wrap items-stretch justify-center gap-4 md:gap-6">
+                <div class="flow-item flex items-center justify-center">Customers</div>
+                <div class="flow-arrow hidden md:block">&rarr;</div>
+                <div class="flow-item flex items-center justify-center">Vetted Vendors<br>(High-Quality Products)</div>
+                <div class="flow-arrow hidden md:block">&rarr;</div>
+                <div class="flow-item flex items-center justify-center">Exclusive Affiliates<br>(Invite-Only)</div>
+                <div class="flow-arrow hidden md:block">&rarr;</div>
+                <div class="flow-item flex items-center justify-center">Ecosystem Services<br>(Jobs, Optimization)</div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+
+            <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">For Vendors: Seamless Integration</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    We eliminate the friction of multi-platform sales. Vendors get fully customizable, domain-ready storefronts. More importantly, our new Shopify and WooCommerce plugins allow existing stores to sync their products and manage Product affiliates separately, making adoption effortless.
+                </p>
+                <div class="chart-container" style="max-width: 600px; height: 350px;">
+                    <canvas id="adoptionChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">
+                    Product dramatically lowers setup barriers while maximizing vendor control and brand identity.
+                </p>
+            </section>
+
+            <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">For Affiliates: Building Prestige</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    We are ending the "money grab" culture of typical affiliate programs. Product affiliation is invite-only, offered to customers *after* their first purchase. This creates a genuine, exclusive community of brand advocates, all managed through a single, unified dashboard.
+                </p>
+                
+                <div class="mt-10">
+                    <h3 class="text-2xl font-semibold text-emerald-700 mb-6 text-center">The Path to Partnership</h3>
+                    <div class="flex items-center w-full max-w-lg mx-auto">
+                        <div class="step-item">
+                            <div class="step-circle" style="background-color: #059669;">1</div>
+                            <p class="mt-2 font-semibold text-gray-700">Make a Purchase</p>
+                        </div>
+                        <div class="step-connector" style="background-color: #059669;"></div>
+                        <div class="step-item">
+                            <div class="step-circle" style="background-color: #059669;">2</div>
+                            <p class="mt-2 font-semibold text-gray-700">Receive Invite</p>
+                        </div>
+                        <div class="step-connector" style="background-color: #059669;"></div>
+                        <div class="step-item">
+                            <div class="step-circle" style="background-color: #059669;">3</div>
+                            <p class="mt-2 font-semibold text-gray-700">Access Dashboard</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Ecosystem Expansion: Beyond Products</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Our ecosystem creates its own economy. We are launching a Hiring Board for platform-specific jobs (sales agents, shop managers) and offering new services like product image optimization. This diversifies value for everyone and reinforces platform quality.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="chart-container" style="max-width: 600px; height: 350px;">
+                    <canvas id="valueStreamChart"></canvas>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-emerald-700 mb-4">Projected Value Streams</h3>
+                    <p class="text-gray-600 mb-4">
+                        As the platform matures, our value streams will diversify significantly. While product sales remain core, the growth of our SaaS model and new ecosystem services creates a more resilient and profitable business model.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold text-blue-600">Product Sales:</span> Commission from marketplace transactions.</li>
+                        <li><span class="font-semibold text-teal-500">SaaS Fees:</span> Recurring revenue from vendor storefronts & tools.</li>
+                        <li><span class="font-semibold text-yellow-500">Ecosystem Services:</span> Fees from the Hiring Board and optimization services.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">The Foundation: Quality, Trust & Security</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                None of this is possible without a secure and trustworthy foundation. We have secured high-risk processing to ensure seamless, reliable transactions. Furthermore, all vendors are vetted to meet the highest standards, ensuring our customers only get the best of the best, backed by community-driven insights.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+                <div class="bg-emerald-50 rounded-lg p-6 border-l-4 border-emerald-500">
+                    <span class="text-5xl font-bold text-emerald-600 block">100%</span>
+                    <span class="text-xl font-semibold text-gray-700 mt-2">Vetted Vendors</span>
+                    <p class="text-gray-600">Only the highest-quality, community-approved brands.</p>
+                </div>
+                <div class="bg-teal-50 rounded-lg p-6 border-l-4 border-teal-500">
+                    <span class="text-5xl font-bold text-teal-600 block">✓</span>
+                    <span class="text-xl font-semibold text-gray-700 mt-2">High-Risk Processing</span>
+                    <p class="text-gray-600">Secure, stable, and reliable financial infrastructure.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 mt-8 text-gray-500 text-sm">
+        <p>&copy; 2025 product.example. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const energeticPalette = {
+                blue: '#059669',   // Emerald 600
+                teal: '#0D9488',   // Teal 600
+                yellow: '#F59E0B', // Amber 500
+                gray: '#4B5563',   // Gray 600
+                lightGray: '#D1D5DB' // Gray 300
+            };
+
+            const tooltipCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            const audienceCtx = document.getElementById('audienceChart').getContext('2d');
+            new Chart(audienceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Fitness & Athletes',
+                        ['Students &', 'Professionals'],
+                        ['Aspirational', 'Achievers'],
+                        ['Health-Conscious', 'Aging']
+                    ],
+                    datasets: [{
+                        data: [35, 30, 20, 15],
+                        backgroundColor: [
+                            energeticPalette.blue,
+                            energeticPalette.teal,
+                            energeticPalette.yellow,
+                            energeticPalette.gray
+                        ],
+                        borderColor: '#FFFFFF',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        ...tooltipCallback.plugins
+                    }
+                }
+            });
+
+            const adoptionCtx = document.getElementById('adoptionChart').getContext('2d');
+            new Chart(adoptionCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        ['Inventory &', 'Order Sync'],
+                        ['Storefront', 'Customization'],
+                        ['Time to Market'],
+                        ['Affiliate System', 'Setup']
+                    ],
+                    datasets: [
+                        {
+                            label: 'Traditional Marketplace',
+                            data: [10, 3, 8, 9],
+                            backgroundColor: energeticPalette.lightGray,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Product (w/ Sync)',
+                            data: [2, 9, 3, 2],
+                            backgroundColor: energeticPalette.blue,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Barrier to Adoption (1-10)',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        x: {
+                             ticks: {
+                                font: {
+                                    size: 12
+                                }
+                             }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        ...tooltipCallback.plugins
+                    }
+                }
+            });
+
+            const valueStreamCtx = document.getElementById('valueStreamChart').getContext('2d');
+            new Chart(valueStreamCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        ['Year 1', 'Projection'],
+                        ['Year 3', 'Projection']
+                    ],
+                    datasets: [
+                        {
+                            label: 'Product Sales',
+                            data: [80, 60],
+                            backgroundColor: energeticPalette.blue,
+                        },
+                        {
+                            label: 'Vendor SaaS Fees',
+                            data: [15, 25],
+                            backgroundColor: energeticPalette.teal,
+                        },
+                        {
+                            label: 'Ecosystem Services',
+                            data: [5, 15],
+                            backgroundColor: energeticPalette.yellow,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            ticks: {
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Value Share (%)',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        ...tooltipCallback.plugins
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

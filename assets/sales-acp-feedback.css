@@ -1,0 +1,447 @@
+/**
+ * Sales ACP Feedback System Styles
+ * Mobile-first responsive design with pulse animations
+ */
+
+/* =================================
+   PULSE ANIMATION
+   ================================= */
+
+@keyframes sacp-feedback-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(255, 215, 0, 0);
+    }
+}
+
+.sacp_feedback-pulse {
+    animation: sacp-feedback-pulse 2s infinite;
+    position: relative;
+}
+
+.sacp_feedback-pulse::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--acp-gold, #FFD700), var(--acp-gold-light, #ffed4e));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.3;
+    animation: sacp-feedback-pulse 2s infinite;
+}
+
+/* =================================
+   MODAL OVERLAY
+   ================================= */
+
+.sacp_feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+    opacity: 0;
+    animation: sacp-feedback-fadeIn 0.3s forwards;
+}
+
+@keyframes sacp-feedback-fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* =================================
+   MODAL CONTAINER
+   ================================= */
+
+.sacp_feedback-modal {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    animation: sacp-feedback-slideUp 0.3s ease-out;
+}
+
+@keyframes sacp-feedback-slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* =================================
+   MODAL HEADER
+   ================================= */
+
+.sacp_feedback-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 16px;
+    border-bottom: 2px solid var(--acp-platinum, #e5e7eb);
+}
+
+.sacp_feedback-header h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--acp-carbon, #1f2937);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sacp_feedback-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--acp-graphite, #6b7280);
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.sacp_feedback-close:hover {
+    background: var(--acp-platinum, #e5e7eb);
+    color: var(--acp-carbon, #1f2937);
+}
+
+/* =================================
+   MODAL INTRO
+   ================================= */
+
+.sacp_feedback-intro {
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+    border-bottom: 1px solid var(--acp-gold-light, #ffed4e);
+}
+
+.sacp_feedback-intro p {
+    margin: 0;
+    color: var(--acp-carbon, #1f2937);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =================================
+   FORM CONTAINER
+   ================================= */
+
+.sacp_feedback-form {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* =================================
+   FORM FIELDS
+   ================================= */
+
+.sacp_feedback-field {
+    margin-bottom: 20px;
+}
+
+.sacp_feedback-field label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--acp-carbon, #1f2937);
+    margin-bottom: 8px;
+}
+
+.sacp_feedback-field input[type="text"],
+.sacp_feedback-field select,
+.sacp_feedback-field textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--acp-platinum, #e5e7eb);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--acp-carbon, #1f2937);
+    background: white;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.sacp_feedback-field input[type="text"]:focus,
+.sacp_feedback-field select:focus,
+.sacp_feedback-field textarea:focus {
+    outline: none;
+    border-color: var(--acp-gold, #FFD700);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.sacp_feedback-field textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.sacp_feedback-hint {
+    font-size: 12px;
+    color: var(--acp-graphite, #6b7280);
+    margin-top: 6px;
+    display: none;
+}
+
+.sacp_feedback-field select:focus + .sacp_feedback-hint,
+.sacp_feedback-field input:focus + .sacp_feedback-hint,
+.sacp_feedback-field textarea:focus + .sacp_feedback-hint {
+    display: block;
+}
+
+#categoryDescription {
+    font-style: italic;
+}
+
+#titleCounter {
+    font-weight: 600;
+    color: var(--acp-carbon, #1f2937);
+}
+
+/* =================================
+   CONTEXT SECTION
+   ================================= */
+
+.sacp_feedback-context {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.sacp_feedback-context strong {
+    display: block;
+    color: var(--acp-carbon, #1f2937);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.sacp_feedback-context ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sacp_feedback-context li {
+    font-size: 12px;
+    color: var(--acp-graphite, #6b7280);
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.sacp_feedback-context-value {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: var(--acp-carbon, #1f2937);
+    word-break: break-all;
+}
+
+/* =================================
+   MESSAGE DISPLAY
+   ================================= */
+
+.sacp_feedback-message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sacp_feedback-message-success {
+    background: #ecfdf5;
+    border: 2px solid #10b981;
+    color: #047857;
+}
+
+.sacp_feedback-message-error {
+    background: #fef2f2;
+    border: 2px solid #ef4444;
+    color: #991b1b;
+}
+
+.sacp_feedback-message-info {
+    background: #eff6ff;
+    border: 2px solid #3b82f6;
+    color: #1e40af;
+}
+
+/* =================================
+   FORM ACTIONS
+   ================================= */
+
+.sacp_feedback-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    padding-top: 16px;
+    border-top: 1px solid var(--acp-platinum, #e5e7eb);
+}
+
+.sacp_feedback-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sacp_feedback-btn-secondary {
+    background: white;
+    color: var(--acp-carbon, #1f2937);
+    border: 2px solid var(--acp-platinum, #e5e7eb);
+}
+
+.sacp_feedback-btn-secondary:hover:not(:disabled) {
+    background: var(--acp-platinum, #e5e7eb);
+}
+
+.sacp_feedback-btn-primary {
+    background: linear-gradient(135deg, var(--acp-gold, #FFD700), var(--acp-gold-light, #ffed4e));
+    color: var(--acp-carbon, #1f2937);
+    border: 2px solid var(--acp-gold, #FFD700);
+}
+
+.sacp_feedback-btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.sacp_feedback-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =================================
+   LOADING SPINNER
+   ================================= */
+
+.sacp_feedback-spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top-color: var(--acp-carbon, #1f2937);
+    border-radius: 50%;
+    animation: sacp-feedback-spin 0.6s linear infinite;
+}
+
+@keyframes sacp-feedback-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sacp_feedback-btn-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+   ================================= */
+
+@media (max-width: 768px) {
+    .sacp_feedback-overlay {
+        padding: 0;
+        align-items: stretch;
+    }
+    
+    .sacp_feedback-modal {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        height: 100%;
+    }
+    
+    .sacp_feedback-header {
+        padding: 20px 16px 12px;
+    }
+    
+    .sacp_feedback-header h3 {
+        font-size: 20px;
+    }
+    
+    .sacp_feedback-intro {
+        padding: 12px 16px;
+    }
+    
+    .sacp_feedback-form {
+        padding: 16px;
+    }
+    
+    .sacp_feedback-actions {
+        flex-direction: column-reverse;
+    }
+    
+    .sacp_feedback-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sacp_feedback-header h3 {
+        font-size: 18px;
+    }
+    
+    .sacp_feedback-field input[type="text"],
+    .sacp_feedback-field select,
+    .sacp_feedback-field textarea {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+}
+
+/* =================================
+   ACCESSIBILITY
+   ================================= */
+
+.sacp_feedback-field input:invalid:not(:placeholder-shown),
+.sacp_feedback-field select:invalid:not(:placeholder-shown),
+.sacp_feedback-field textarea:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+}
+
+.sacp_feedback-btn:focus-visible,
+.sacp_feedback-close:focus-visible,
+.sacp_feedback-field input:focus-visible,
+.sacp_feedback-field select:focus-visible,
+.sacp_feedback-field textarea:focus-visible {
+    outline: 2px solid var(--acp-gold, #FFD700);
+    outline-offset: 2px;
+}
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Reserved example host for portfolio review. Replace before any deployment. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://product.example/</loc>
+    <lastmod>2025-10-31</lastmod>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+

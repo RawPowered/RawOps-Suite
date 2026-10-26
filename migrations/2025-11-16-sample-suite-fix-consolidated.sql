@@ -1,0 +1,196 @@
+-- 2025-11-16 Sample Suite Follow-up Fix (Consolidated)
+-- Purpose: Ensure steps 110-111 exist and templates are up to date
+-- Safe to run multiple times (idempotent)
+
+START TRANSACTION;
+
+-- ============================================
+-- Verify/Create kickoff-reminder template
+-- ============================================
+INSERT INTO `email_templates` (`slug`, `name`, `subject`, `html_body`, `text_body`)
+VALUES (
+    'sample-suite-kickoff-reminder',
+    'Sample Suite · Kickoff Reminder',
+    'Making sure you got this!',
+    '<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background:#f1f5f9;padding:28px;font-family:&quot;Inter&quot;,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif;">
+    <tr>
+        <td align="center">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="width:640px;max-width:640px;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(15,23,42,0.12);">
+                <tr>
+                    <td style="background:#0f172a;background:linear-gradient(135deg,#0f172a,#1e3a8a);padding:32px 36px;color:#e0f2fe;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:16px;">
+                            <tr>
+                                <td>
+                                    <img src="https://product.example/assets/logo.svg" alt="Product" width="132" style="display:block;border:0;">
+                                </td>
+                                <td align="right" style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#cbd5f5;font-weight:600;">
+                                    Quick nudge
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="font-size:26px;line-height:1.3;font-weight:700;color:#f8fafc;margin-bottom:12px;">
+                            Just making sure you saw this sample offer
+                        </div>
+                        <p style="margin:0 0 22px 0;font-size:16px;color:#cbd5f5;">
+                            Hi {{recipient_name}}, resurfacing the Blue / Gold blends plus the premium product format dash&mdash;grab it via the portal and it ships same day, no card required.
+                        </p>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td bgcolor="#facc15" style="border-radius:999px;">
+                                    <a href="{{promo_request_url}}" target="_blank" style="display:inline-block;padding:12px 28px;font-weight:700;font-size:15px;color:#0f172a;text-decoration:none;">
+                                        Reopen the Portal
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:28px 32px;color:#0f172a;font-size:16px;line-height:1.6;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:20px;">
+                            <tr>
+                                <td width="33.33%" style="padding:8px;border:1px solid #e2e8f0;border-radius:16px;text-align:center;">
+                                    <img src="https://product.example/assets/img/product-pack%20Blue%2020%20product%20Product%20Transparent.png" alt="Blue 60 product" width="120" style="display:block;margin:0 auto 12px auto;border:0;">
+                                    <div style="font-weight:600;">Blue 60 Blend</div>
+                                    <div style="font-size:13px;color:#475569;">Clean daily wellness baseline.</div>
+                                </td>
+                                <td width="33.33%" style="padding:8px;border:1px solid #e2e8f0;border-radius:16px;text-align:center;">
+                                    <img src="https://product.example/assets/img/product-pack%20Gold%2040%20product%20Product%20Transparent.png" alt="Gold 120 product" width="120" style="display:block;margin:0 auto 12px auto;border:0;">
+                                    <div style="font-weight:600;">Gold 120 Blend</div>
+                                    <div style="font-size:13px;color:#475569;">Premium ritual for counter upgrades.</div>
+                                </td>
+                                <td width="33.33%" style="padding:8px;border:1px solid #e2e8f0;border-radius:16px;text-align:center;">
+                                    <img src="https://product.example/assets/img/product-pack%20Jar%20of%20Product%20Product%20product format.png" alt="Premium product format Dash" width="120" style="display:block;margin:0 auto 12px auto;border:0;">
+                                    <div style="font-weight:600;">1g product format Dash</div>
+                                    <div style="font-size:13px;color:#475569;">Tea / smoothie bar friendly.</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid #e2e8f0;border-radius:16px;margin-bottom:20px;">
+                            <tr>
+                                <td style="padding:20px;">
+                                    <div style="font-weight:600;margin-bottom:10px;">Still zero friction:</div>
+                                    <ul style="margin:0;padding-left:18px;color:#475569;">
+                                        <li>Tracks shipping + delivery for you.</li>
+                                        <li>Drop in the right ship-to or CC the buyer.</li>
+                                        <li>MAP-friendly, COA-backed, no credit card required.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid #e2e8f0;border-radius:16px;background:#f8fafc;margin-bottom:24px;">
+                            <tr>
+                                <td style="padding:20px;">
+                                    <div style="font-weight:600;margin-bottom:8px;">Need a refresher?</div>
+                                    <ul style="margin:0;padding-left:18px;color:#475569;">
+                                        <li>Pick Blue, Gold, or the product format dash inside the portal.</li>
+                                        <li>Confirm who should receive it (or share with your buyer).</li>
+                                        <li>We ship same day and send tracking automatically.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto 14px auto;">
+                            <tr>
+                                <td bgcolor="#0f172a" style="border-radius:12px;">
+                                    <a href="{{promo_request_url}}" target="_blank" style="display:inline-block;padding:14px 34px;font-weight:600;font-size:15px;color:#ffffff;text-decoration:none;">
+                                        Reopen the Portal
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <p style="margin:0 0 6px 0;text-align:center;font-size:13px;color:#64748b;">
+                            Mobile-friendly link&mdash;hand it to the buyer if that''s easier.
+                        </p>
+                        <p style="margin:0;text-align:center;font-size:12px;color:#94a3b8;">
+                            Button acting up? Copy and paste: <a href="{{promo_request_url}}" style="color:#0f172a;font-weight:600;text-decoration:none;" target="_blank">{{promo_request_url}}</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:20px 32px;border-top:1px solid #e2e8f0;background:#f8fafc;color:#475569;">
+                        <p style="margin:0 0 6px 0;">Talk soon,</p>
+                        <p style="margin:0;font-weight:600;color:#0f172a;">{{agent_name}}</p>
+                        <p style="margin:0;font-size:14px;">{{agent_email}} | {{agent_phone}}</p>
+                        <p style="margin:12px 0 0 0;font-size:12px;color:#94a3b8;">Product | Wholesale Sample Desk</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>',
+    'Hi {{recipient_name}},
+
+Just making sure you saw the Blue / Gold sample kit plus the premium product format dash. It takes a minute to reserve and ships the same day.
+
+Still zero friction:
+- Track shipping and delivery updates
+- Drop in the right ship-to contact or loop in the buyer
+- MAP-friendly, COA-backed, and no credit card required
+
+Grab it here: {{promo_request_url}}
+
+Talk soon,
+{{agent_name}}
+{{agent_email}} | {{agent_phone}}
+Product | Wholesale Sample Desk'
+)
+ON DUPLICATE KEY UPDATE
+    `name` = VALUES(`name`),
+    `subject` = VALUES(`subject`),
+    `html_body` = VALUES(`html_body`),
+    `text_body` = VALUES(`text_body`);
+
+-- ============================================
+-- Create workflow steps 110 and 111 (kickoff reminders)
+-- ============================================
+
+INSERT INTO `email_followup_workflows`
+(`name`, `description`, `trigger_type`, `trigger_delay_hours`, `scope`, `owner_agent_id`, `template_id`, `allow_ai_generation`, `priority`, `is_active`, `has_conditions`, `chain_id`, `chain_step`)
+SELECT
+  'Sample Suite · Step 110 — Kickoff Recheck 30m',
+  'Sends reminder 30 minutes after kickoff is opened without clicking.',
+  'custom',
+  0.5,
+  'global',
+  NULL,
+  (SELECT id FROM email_templates WHERE slug = 'sample-suite-kickoff-reminder' LIMIT 1),
+  0,
+  97,
+  1,
+  0,
+  c.id,
+  110
+FROM email_workflow_chains c
+WHERE c.chain_name = 'Sample Suite v1'
+  AND NOT EXISTS (
+    SELECT 1 FROM email_followup_workflows WHERE chain_step = 110 AND chain_id = c.id
+  );
+
+INSERT INTO `email_followup_workflows`
+(`name`, `description`, `trigger_type`, `trigger_delay_hours`, `scope`, `owner_agent_id`, `template_id`, `allow_ai_generation`, `priority`, `is_active`, `has_conditions`, `chain_id`, `chain_step`)
+SELECT
+  'Sample Suite · Step 111 — Kickoff Recheck 2h',
+  'Sends reminder 2 hours after kickoff if not opened or clicked.',
+  'custom',
+  2,
+  'global',
+  NULL,
+  (SELECT id FROM email_templates WHERE slug = 'sample-suite-kickoff-reminder' LIMIT 1),
+  0,
+  96,
+  1,
+  0,
+  c.id,
+  111
+FROM email_workflow_chains c
+WHERE c.chain_name = 'Sample Suite v1'
+  AND NOT EXISTS (
+    SELECT 1 FROM email_followup_workflows WHERE chain_step = 111 AND chain_id = c.id
+  );
+
+COMMIT;
+
+
+
+

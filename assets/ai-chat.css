@@ -1,0 +1,187 @@
+/* product/assets/ai-chat.css */
+/* Styling for the AI Sales Assistant Chat Widget */
+
+:root {
+    --ai-chat-primary: #059669; /* Product Green */
+    --ai-chat-secondary: #1e40af; /* Product Blue */
+    --ai-chat-text: #333;
+    --ai-chat-bg: #fff;
+    --ai-chat-header-bg: #f9fafb;
+    --ai-chat-user-msg-bg: #dbeafe;
+    --ai-chat-ai-msg-bg: #f0fdf4;
+    --ai-chat-border-color: #e5e7eb;
+}
+
+.ai-chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.ai-chat-button {
+    background-color: var(--ai-chat-primary);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.ai-chat-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ai-chat-window {
+    width: 375px;
+    height: 500px;
+    max-height: calc(100vh - 40px);
+    background-color: var(--ai-chat-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.ai-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--ai-chat-header-bg);
+    border-bottom: 1px solid var(--ai-chat-border-color);
+}
+
+.ai-chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ai-chat-text);
+}
+
+.ai-chat-close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #9ca3af;
+    padding: 0;
+    line-height: 1;
+}
+
+.ai-chat-messages {
+    flex-grow: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.user-message, .ai-message {
+    padding: 10px 14px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.user-message {
+    background-color: var(--ai-chat-user-msg-bg);
+    color: #1e40af;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.ai-message {
+    background-color: var(--ai-chat-ai-msg-bg);
+    color: #14532d;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    position: relative;
+    padding-bottom: 30px; /* Space for feedback buttons */
+}
+
+.ai-feedback-container {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+}
+
+.ai-feedback-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.ai-feedback-button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.ai-feedback-button:disabled {
+    cursor: not-allowed;
+}
+
+
+.ai-message.error-message {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.ai-chat-input-container {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid var(--ai-chat-border-color);
+    background-color: var(--ai-chat-header-bg);
+}
+
+#ai-chat-input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--ai-chat-border-color);
+    border-radius: 20px;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+#ai-chat-input:focus {
+    outline: none;
+    border-color: var(--ai-chat-secondary);
+    box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.2);
+}
+
+.ai-chat-send-button {
+    background-color: var(--ai-chat-primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ai-chat-send-button:hover {
+    background-color: #065f46;
+}
+
+.ai-chat-send-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Access Request Update</title>
+</head>
+<body style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background-color:#f8fafc;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8fafc;padding:40px 20px;">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);overflow:hidden;">
+                    <!-- Header -->
+                    <tr>
+                        <td style="background:linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);padding:40px 30px;text-align:center;">
+                            <h1 style="margin:0;color:#ffffff;font-size:28px;font-weight:800;">Product<sup style="font-size:0.5em;">®</sup> Legal Management</h1>
+                            <p style="margin:10px 0 0 0;color:rgba(255,255,255,0.9);font-size:16px;">Access Request Update</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding:40px 30px;">
+                            <p style="margin:0 0 20px 0;color:#0f172a;font-size:16px;line-height:1.6;">
+                                Hello <strong>{{first_name}}</strong>,
+                            </p>
+                            
+                            <p style="margin:0 0 20px 0;color:#475569;font-size:15px;line-height:1.7;">
+                                Thank you for your interest in accessing the Product Legal Management System. After careful review, we are unable to approve your access request at this time.
+                            </p>
+                            
+                            {{#if reason}}
+                            <div style="background:#fee2e2;border-left:4px solid:#dc2626;padding:20px;margin:24px 0;border-radius:8px;">
+                                <p style="margin:0 0 8px 0;color:#991b1b;font-weight:600;font-size:14px;">Administrator Notes:</p>
+                                <p style="margin:0;color:#991b1b;font-size:14px;line-height:1.6;">{{reason}}</p>
+                            </div>
+                            {{/if}}
+                            
+                            <p style="margin:24px 0 0 0;color:#64748b;font-size:14px;line-height:1.6;">
+                                If you believe this decision was made in error or if you have additional information to support your request, please contact the administrator who provided your invitation link.
+                            </p>
+                            
+                            <p style="margin:20px 0 0 0;color:#64748b;font-size:14px;line-height:1.6;">
+                                Thank you for your understanding.
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background:#f8fafc;padding:30px;text-align:center;border-top:1px solid #e2e8f0;">
+                            <p style="margin:0 0 8px 0;color:#94a3b8;font-size:13px;">
+                                <strong>Product® Legal Management Systems</strong>
+                            </p>
+                            <p style="margin:0;color:#cbd5e1;font-size:12px;">
+                                Enterprise Legal Technology • Secure • Compliant • Confidential
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+  {{#if agent_name}}
+  <div style="max-width:600px;margin:24px auto 0 auto;padding:24px 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;line-height:1.6;">
+    <p style="margin:0 0 6px;font-size:14px;color:#374151;">Need help? Contact your Product sales rep directly:</p>
+    <p style="margin:0;font-size:14px;color:#1f2937;">
+      <strong>{{agent_name}}</strong><br>
+      <span style="color:#64748b;">Sales Representative, Product</span><br>
+      <span style="color:#64748b;">📧 {{agent_email}}</span>{{#if agent_phone}}<br><span style="color:#64748b;">📱 {{agent_phone}}</span>{{/if}}
+    </p>
+  </div>
+  {{/if}}
+  {{tracking_pixel}}
+</body>
+</html>

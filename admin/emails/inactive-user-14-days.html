@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important: Your Product® Account Status</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f8fafc; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .header { background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 32px 24px; text-align: center; }
+        .header h1 { margin: 0; font-size: 28px; font-weight: 700; }
+        .header p { margin: 8px 0 0; opacity: 0.9; font-size: 16px; }
+        .content { padding: 32px 24px; }
+        .content h2 { color: #1f2937; margin: 0 0 16px; font-size: 24px; }
+        .content p { margin: 0 0 16px; color: #4b5563; font-size: 16px; }
+        .cta-button { display: inline-block; background: #dc2626; color: white; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; margin: 24px 0; transition: background 0.3s; }
+        .cta-button:hover { background: #b91c1c; }
+        .urgent-box { background: #fef2f2; border: 2px solid #dc2626; border-radius: 8px; padding: 20px; margin: 24px 0; }
+        .footer { background: #f8fafc; padding: 24px; text-align: center; border-top: 1px solid #e5e7eb; }
+        .footer p { margin: 0; color: #6b7280; font-size: 14px; }
+        .highlight { background: #fee2e2; padding: 2px 6px; border-radius: 4px; color: #991b1b; font-weight: 600; }
+        .timeline { background: #f9fafb; border-radius: 8px; padding: 20px; margin: 20px 0; border-left: 4px solid #6b7280; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 Urgent Account Notice</h1>
+            <p>Immediate action required for your Product® account</p>
+        </div>
+        
+        <div class="content">
+            <h2>Hi {{first_name}},</h2>
+            
+            <p>Your Product® account has been inactive for <span class="highlight">14 days</span>. This extended period of inactivity is concerning, and we need to hear from you soon.</p>
+            
+            <div class="urgent-box">
+                <h3 style="margin: 0 0 12px; color: #dc2626;">⚠️ Account Status Alert</h3>
+                <p style="margin: 0; font-weight: 600;">Your account is at risk of being flagged for administrative review if no activity is detected soon.</p>
+            </div>
+            
+            <div class="timeline">
+                <h3 style="margin: 0 0 12px; color: #374151;">📅 What Happens Next</h3>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li><strong>Day 30:</strong> Account flagged for administrative review</li>
+                    <li><strong>Day 35:</strong> Account may be suspended pending review</li>
+                    <li><strong>Today:</strong> Log in now to maintain active status</li>
+                </ul>
+            </div>
+            
+            <p><strong>Why This Matters:</strong></p>
+            <ul>
+                <li>Inactive accounts may lose access to training materials</li>
+                <li>Commission tracking and payouts could be affected</li>
+                <li>Your position in the sales network may be impacted</li>
+                <li>Reactivation may require additional verification steps</li>
+            </ul>
+            
+            <p>We understand that life gets busy, but maintaining regular contact with our platform is essential for your continued success and compliance with our active member requirements.</p>
+            
+            <div style="text-align: center;">
+                <a href="{{login_url}}" class="cta-button">🔐 Login Now to Maintain Status</a>
+            </div>
+            
+            <p><strong>Having trouble logging in?</strong> Contact our support team immediately at sample-013@example.com or reply to this email. We're here to help resolve any access issues.</p>
+            
+            <p style="margin-top: 32px;">
+                Urgently,<br>
+                <strong>The Product® Administrative Team</strong>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Product® Product. All rights reserved.</p>
+            <p style="margin-top: 8px;">This is an automated urgent notice. Immediate action is required to maintain your account status.</p>
+        </div>
+    </div>
+    {{#if agent_name}}
+    <div style="max-width:600px;margin:24px auto 0 auto;padding:24px 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;line-height:1.6;">
+        <p style="margin:0 0 6px;font-size:14px;color:#374151;">Need help? Contact your Product sales rep directly:</p>
+        <p style="margin:0;font-size:14px;color:#1f2937;">
+            <strong>{{agent_name}}</strong><br>
+            <span style="color:#64748b;">Sales Representative, Product</span><br>
+            <span style="color:#64748b;">📧 {{agent_email}}</span>{{#if agent_phone}}<br><span style="color:#64748b;">📱 {{agent_phone}}</span>{{/if}}
+        </p>
+    </div>
+    {{/if}}
+    {{tracking_pixel}}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

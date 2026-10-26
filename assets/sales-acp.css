@@ -1,0 +1,826 @@
+/* Paladin Theme - Premium CRM Design System */
+/* Inspired by Samsung x Sony PlayStation White 2026 */
+
+:root {
+    /* Primary Colors */
+    --acp-white: #ffffff;
+    --acp-gold: #d4af37;
+    --acp-gold-light: #e8c85a;
+    --acp-gold-dark: #b8962d;
+    --acp-blue: #2563eb;
+    --acp-blue-deep: #1e3a8a;
+    --acp-blue-light: #60a5fa;
+    
+    /* Organic & Metal Tones */
+    --acp-green: #10b981;
+    --acp-green-light: #34d399;
+    --acp-silver: #94a3b8;
+    --acp-platinum: #e2e8f0;
+    --acp-graphite: #475569;
+    --acp-carbon: #0f172a;
+    
+    /* Semantic Colors */
+    --acp-success: #10b981;
+    --acp-success-bg: #dcfce7;
+    --acp-warning: #f59e0b;
+    --acp-warning-bg: #fef3c7;
+    --acp-danger: #ef4444;
+    --acp-danger-bg: #fee2e2;
+    --acp-info: #3b82f6;
+    --acp-info-bg: #dbeafe;
+    
+    /* Legacy mappings */
+    --acp-bg: var(--acp-white);
+    --acp-text: var(--acp-carbon);
+    --acp-muted: var(--acp-graphite);
+    --acp-border: var(--acp-platinum);
+    --acp-card: var(--acp-white);
+    
+    /* Shadows & Effects */
+    --acp-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+    --acp-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.12);
+    --acp-shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.16);
+    --acp-shadow-xl: 0 24px 48px rgba(15, 23, 42, 0.18);
+    --acp-shadow-gold: 0 12px 32px rgba(212, 175, 55, 0.25);
+    --acp-shadow-blue: 0 12px 32px rgba(37, 99, 235, 0.25);
+    
+    --acp-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,body{background:var(--acp-bg);color:var(--acp-text);font-family:Inter,system-ui,-apple-system,sans-serif}
+.acp{max-width:1400px;margin:0 auto;padding:20px}
+
+/* Base Card Component */
+.card, .sacp_card {
+    background: var(--acp-white);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--acp-platinum);
+    box-shadow: var(--acp-shadow-sm);
+    margin-bottom: 16px;
+}
+
+/* Enhanced Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--acp-transition);
+    background: var(--acp-gold);
+    color: var(--acp-carbon);
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--acp-shadow-md);
+}
+
+.btn.primary {
+    background: var(--acp-gold);
+    color: var(--acp-carbon);
+}
+
+.btn.secondary {
+    background: var(--acp-platinum);
+    color: var(--acp-graphite);
+}
+
+.btn.small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+/* Chip Component */
+.chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.chip.chip-success {
+    background: var(--acp-success-bg);
+    color: var(--acp-success);
+}
+
+.chip.chip-status {
+    background: var(--acp-warning-bg);
+    color: var(--acp-warning);
+}
+
+/* Paladin Input */
+.paladin-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--acp-platinum);
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all var(--acp-transition);
+}
+
+.paladin-input:focus {
+    outline: none;
+    border-color: var(--acp-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Paladin Table */
+.paladin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--acp-white);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.paladin-table thead {
+    background: linear-gradient(135deg, var(--acp-platinum), #f8fafc);
+}
+
+.paladin-table th {
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--acp-carbon);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--acp-gold-light);
+}
+
+.paladin-table td {
+    padding: 14px;
+    border-bottom: 1px solid var(--acp-platinum);
+}
+
+.paladin-table tbody tr:hover {
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+}
+
+/* Table Wrapper for responsive */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+}
+
+/* Enhanced Paladin Navigation - SACP Prefixed */
+.sacp_nav {
+    position: sticky;
+    top: 0;
+    z-index: 1200; /* Above site header panels on ACP pages */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border-bottom: 1px solid var(--acp-platinum);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--acp-shadow-md);
+    padding: 12px 20px;
+    margin: -20px -20px 24px -20px;
+    height: 64px;
+}
+
+.sacp_nav .sacp_brand {
+    font-size: 20px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--acp-gold) 0%, var(--acp-gold-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sacp_nav .sacp_brand::before {
+    content: "⚜️";
+    font-size: 24px;
+    -webkit-text-fill-color: initial;
+}
+
+.sacp_nav .sacp_links {
+    display: flex;
+    gap: 4px;
+    flex: 1;
+    justify-content: center;
+    padding: 0 32px;
+}
+
+.sacp_nav .sacp_link {
+    position: relative;
+    color: var(--acp-graphite);
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all var(--acp-transition);
+    white-space: nowrap;
+}
+
+.sacp_nav .sacp_link:hover {
+    color: var(--acp-blue);
+    background: rgba(37, 99, 235, 0.08);
+    transform: translateY(-1px);
+}
+
+.sacp_nav .sacp_link.active {
+    color: var(--acp-white);
+    background: linear-gradient(135deg, var(--acp-blue-deep) 0%, var(--acp-blue) 100%);
+    box-shadow: var(--acp-shadow-blue);
+}
+
+.sacp_nav .sacp_badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: var(--acp-danger);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 999px;
+    min-width: 18px;
+    text-align: center;
+    animation: pulse-badge 2s infinite;
+}
+
+.sacp_nav .sacp_user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--acp-graphite);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sacp_user-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sacp_user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--acp-gold) 0%, var(--acp-gold-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--acp-white);
+    font-size: 14px;
+    box-shadow: var(--acp-shadow-gold);
+}
+
+.sacp_user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sacp_user-name {
+    font-weight: 600;
+    color: var(--acp-carbon);
+    font-size: 14px;
+}
+
+.sacp_user-role {
+    font-size: 11px;
+    color: var(--acp-silver);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile overflow */
+.sacp_nav .sacp_overflow{display:none;position:relative;z-index: 1210}
+.sacp_nav .sacp_overflow-btn{background:#fff;border:1px solid var(--acp-border);border-radius:10px;padding:6px 10px;cursor:pointer}
+.sacp_nav .sacp_overflow-menu{display:none;position:absolute;right:0;top:36px;background:#fff;border:1px solid var(--acp-border);border-radius:12px;padding:8px;box-shadow:0 10px 24px rgba(0,0,0,.08);min-width:200px; z-index: 1215}
+.sacp_nav .sacp_overflow.open .sacp_overflow-menu{display:block}
+@media(max-width:780px){.sacp_nav .sacp_links{display:none}.sacp_nav .sacp_overflow{display:block}}
+
+/* Mobile spacing refinements to remove top/bottom gaps */
+@media(max-width:780px){
+    .sacp_nav{
+        margin: 0 -12px 12px -12px; /* eliminate large top gap and tighten sides */
+        padding: 10px 12px;
+        height: auto;
+        min-height: 56px;
+    }
+}
+
+/* Unified Mobile Menu Hub */
+.mmhub_backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;visibility:hidden;transition:opacity .2s ease;z-index:1290}
+.mmhub_panel{position:fixed;left:50%;top:60px;transform:translateX(-50%) scale(.98);width:92%;max-width:440px;background:#fff;border:1px solid var(--acp-border);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.2);opacity:0;visibility:hidden;transition:transform .2s ease,opacity .2s ease;z-index:1300}
+.mmhub_header{display:flex;gap:8px;padding:12px 12px 0 12px}
+.mmhub_tab{flex:1;text-align:center;padding:10px;border-radius:10px;background:#f3f4f6;color:#374151;font-weight:700;cursor:pointer}
+.mmhub_tab.active{background:linear-gradient(135deg,var(--acp-blue-deep),var(--acp-blue));color:#fff}
+.mmhub_body{padding:8px 12px 12px 12px}
+.mmhub_list a{display:block;padding:12px 14px;border-radius:10px;text-decoration:none;color:#374151;border:1px solid #e5e7eb;margin-bottom:8px}
+.mmhub_list a:hover{background:#f9fafb}
+.mmhub_open .mmhub_backdrop{opacity:1;visibility:visible}
+.mmhub_open .mmhub_panel{opacity:1;visibility:visible;transform:translateX(-50%) scale(1)}
+
+/* Enhanced Paladin Cards - SACP Prefixed */
+.sacp_card {
+    background: var(--acp-white);
+    border: 1px solid var(--acp-platinum);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--acp-shadow-sm);
+    transition: all var(--acp-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.sacp_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--acp-gold) 0%, var(--acp-gold-light) 50%, var(--acp-gold) 100%);
+    opacity: 0;
+    transition: opacity var(--acp-transition);
+}
+
+.sacp_card:hover {
+    box-shadow: var(--acp-shadow-lg);
+    transform: translateY(-2px);
+}
+
+.sacp_card:hover::before {
+    opacity: 1;
+}
+
+.sacp_card.subtle {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid var(--acp-platinum);
+}
+
+/* Lead Cards with Pulse Effects - SACP Prefixed */
+.sacp_lead-card {
+    background: var(--acp-white);
+    border: 2px solid var(--acp-platinum);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: all var(--acp-transition);
+    position: relative;
+}
+
+.sacp_lead-card.urgent-followup {
+    animation: pulse-urgent 2s infinite;
+    border-color: var(--acp-danger);
+}
+
+.sacp_lead-card.needs-attention {
+    animation: pulse-warning 3s infinite;
+    border-color: var(--acp-warning);
+}
+
+@keyframes pulse-urgent {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse-warning {
+    0% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+    }
+}
+
+/* Enhanced Paladin Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--acp-blue-deep) 0%, var(--acp-blue) 100%);
+    color: var(--acp-white);
+    border: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: var(--acp-shadow-blue);
+    transition: all var(--acp-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 350ms ease, height 350ms ease;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.3);
+}
+
+.btn.secondary {
+    background: var(--acp-white);
+    color: var(--acp-blue);
+    border: 2px solid var(--acp-platinum);
+    box-shadow: var(--acp-shadow-sm);
+}
+
+.btn.secondary:hover {
+    border-color: var(--acp-blue);
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.btn.gold {
+    background: linear-gradient(135deg, var(--acp-gold) 0%, var(--acp-gold-light) 100%);
+    color: var(--acp-white);
+    box-shadow: var(--acp-shadow-gold);
+}
+
+.btn.gold:hover {
+    box-shadow: 0 16px 40px rgba(212, 175, 55, 0.3);
+}
+
+.btn.success {
+    background: linear-gradient(135deg, var(--acp-green) 0%, var(--acp-green-light) 100%);
+}
+
+.btn.danger {
+    background: linear-gradient(135deg, var(--acp-danger) 0%, #f87171 100%);
+}
+
+.btn.warning {
+    background: linear-gradient(135deg, var(--acp-warning) 0%, #fbbf24 100%);
+}
+
+.btn.small {
+    padding: 6px 14px;
+    font-size: 12px;
+}
+
+.btn.large {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+/* Page header */
+.page-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.page-title{margin:0;color:var(--acp-text)}
+.page-subtitle{margin-top:4px;color:var(--acp-muted)}
+.header-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Enhanced Paladin Chips */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all var(--acp-transition);
+}
+
+.chip-status {
+    background: linear-gradient(135deg, var(--acp-platinum) 0%, #cbd5e1 100%);
+    color: var(--acp-graphite);
+    border: 1px solid var(--acp-silver);
+}
+
+.chip-success {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    color: #14532d;
+    border: 1px solid #86efac;
+}
+
+.chip-danger {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: #7f1d1d;
+    border: 1px solid #fca5a5;
+}
+
+.chip-info {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: var(--acp-blue-deep);
+    border: 1px solid #93c5fd;
+}
+
+.chip-gold {
+    background: linear-gradient(135deg, var(--acp-gold) 0%, var(--acp-gold-light) 100%);
+    color: var(--acp-white);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.chip-priority-urgent {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: var(--acp-danger);
+    border: 1px solid var(--acp-danger);
+    animation: pulse-badge 2s infinite;
+}
+
+.chip-priority-high {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    color: #92400e;
+    border: 1px solid #fbbf24;
+}
+
+.chip-priority-medium {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: var(--acp-blue-deep);
+    border: 1px solid #93c5fd;
+}
+
+.chip-priority-low {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    color: var(--acp-graphite);
+    border: 1px solid #d1d5db;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Tables */
+.table{width:100%;border-collapse:collapse}
+.table thead tr{background:#f9fafb;border-bottom:2px solid var(--acp-border)}
+.table th,.table td{padding:12px 8px;text-align:left}
+.row-highlight{border-bottom:1px solid var(--acp-border)}
+.row-hot{background:linear-gradient(90deg,#fef3c7,transparent)}
+.row-warm{background:linear-gradient(90deg,#f0fdf4,transparent)}
+
+/* Utilities */
+.muted{color:var(--acp-muted)}
+.small{font-size:12px}
+.link-plain{text-decoration:none;color:inherit}
+.kv{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;font-size:14px}
+.kv .k{color:var(--acp-muted)}
+.kv .v{color:var(--acp-text)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.grid-2{grid-template-columns:1fr}}
+.layout-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+@media(max-width:900px){.layout-grid{grid-template-columns:1fr}}
+.notice{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fef3c7;border:1px solid #f59e0b;border-radius:10px;padding:12px;margin-bottom:12px}
+.empty-note{margin-top:12px;padding:12px;background:#f3f4f6;border-radius:10px;color:#6b7280}
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center}
+.summary-tile{padding:10px;border-radius:10px}
+.summary-tile.info{background:#dbeafe;color:#1e40af}
+.summary-tile.success{background:#dcfce7;color:#166534}
+
+/* Accordion */
+.acc{margin-top:8px}
+.acc-h{width:100%;text-align:left;background:#f3f4f6;border:1px solid var(--acp-border);padding:10px;border-radius:10px;cursor:pointer;color:#374151;font-weight:700}
+.acc-b{padding:12px 8px}
+
+/* Quick Actions band */
+.quick-band{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #bae6fd;border-radius:14px;padding:16px}
+
+/* Slim cards for dashboard KPIs */
+.kpi-card{text-align:center;background:linear-gradient(135deg,#e0e7ff,#dbeafe);border:1px solid #c7d2fe;border-radius:12px;padding:12px}
+.kpi-card .value{font-size:22px;font-weight:800;color:#1e40af}
+
+/* Admin toggle - SACP Prefixed */
+.sacp_admin-toggle {
+    padding: 6px 12px;
+    background: linear-gradient(135deg, var(--acp-platinum) 0%, var(--acp-silver) 100%);
+    border: 1px solid var(--acp-platinum);
+    border-radius: 999px;
+    color: var(--acp-graphite);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--acp-transition);
+    text-decoration: none;
+}
+
+.sacp_admin-toggle:hover {
+    transform: translateY(-1px);
+    border-color: var(--acp-gold);
+    box-shadow: var(--acp-shadow-gold);
+}
+
+.sacp_admin-toggle.active {
+    background: linear-gradient(135deg, var(--acp-gold) 0%, var(--acp-gold-light) 100%);
+    color: var(--acp-white);
+}
+
+/* Enhanced Stats Grid - SACP Prefixed */
+.sacp_stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.sacp_stat-card {
+    background: var(--acp-white);
+    border: 1px solid var(--acp-platinum);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--acp-transition);
+}
+
+.sacp_stat-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--acp-gold) 0%, var(--acp-gold-light) 100%);
+    opacity: 0.05;
+    border-radius: 0 0 0 100%;
+    transition: all var(--acp-transition);
+}
+
+.sacp_stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--acp-shadow-lg);
+}
+
+.sacp_stat-card:hover::after {
+    opacity: 0.1;
+    width: 70%;
+}
+
+.sacp_stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--acp-blue-deep);
+    margin-bottom: 4px;
+}
+
+.sacp_stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--acp-silver);
+    font-weight: 600;
+}
+
+/* Enhanced Tables */
+.paladin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--acp-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--acp-shadow-sm);
+}
+
+.paladin-table thead {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.paladin-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--acp-graphite);
+    border-bottom: 2px solid var(--acp-platinum);
+}
+
+.paladin-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--acp-platinum);
+}
+
+.paladin-table tbody tr {
+    transition: all 150ms ease;
+}
+
+.paladin-table tbody tr:hover {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Form Elements */
+.paladin-input {
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--acp-white);
+    border: 2px solid var(--acp-platinum);
+    border-radius: 12px;
+    font-size: 14px;
+    color: var(--acp-carbon);
+    transition: all var(--acp-transition);
+}
+
+.paladin-input:focus {
+    outline: none;
+    border-color: var(--acp-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    transform: translateY(-1px);
+}
+
+.paladin-input::placeholder {
+    color: var(--acp-silver);
+}
+
+.paladin-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+/* Loading & Success Animations */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, var(--acp-platinum) 25%, #e2e8f0 50%, var(--acp-platinum) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 12px;
+}
+
+@keyframes success-check {
+    0% {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+.success-animation {
+    animation: success-check 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Notification Badge */
+.notification-dot {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    background: var(--acp-danger);
+    border-radius: 50%;
+    border: 2px solid var(--acp-white);
+    animation: pulse-badge 2s infinite;
+}
+
+

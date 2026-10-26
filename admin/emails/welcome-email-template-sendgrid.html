@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>Welcome to Product</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    /* Dark mode tweaks (supported clients only) */
+    @media (prefers-color-scheme: dark) {
+      .bg-body { background-color: #0f1720 !important; }
+      .bg-card { background-color: #101828 !important; }
+      .text-primary { color: #e6f4ea !important; }
+      .text-body { color: #e2e8f0 !important; }
+    }
+    /* Small screens */
+    @media screen and (max-width: 640px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 20px !important; padding-right: 20px !important; }
+      .py { padding-top: 24px !important; padding-bottom: 24px !important; }
+      .logo img { max-width: 140px !important; height: auto !important; }
+      .btn { width: 100% !important; display: block !important; }
+    }
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#f5f7fb;">
+  <!-- Preheader (hidden) -->
+  <div style="display:none; overflow:hidden; line-height:1px; opacity:0; max-height:0; max-width:0; color:transparent;">
+    Your Product account is ready. Sign in to get started.
+  </div>
+
+  <!-- Full width background -->
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="bg-body" style="background-color:#f5f7fb;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <!-- Card container -->
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="container bg-card" style="width:600px; background-color:#ffffff; border-radius:12px; box-shadow:0 2px 8px rgba(16,24,40,0.06);">
+          <!-- Header / Logo -->
+          <tr>
+            <td align="center" class="px py" style="padding: 28px 32px 0 32px;">
+              <a href="{{base_url}}" target="_blank" class="logo" style="text-decoration:none;">
+                <img src="{{assets_base_url}}/logo.svg" alt="Product" width="180" style="display:block; border:0; outline:none; text-decoration:none; height:auto;">
+              </a>
+            </td>
+          </tr>
+
+          <!-- Hero -->
+          <tr>
+            <td class="px" align="left" style="padding: 24px 32px 0 32px;">
+              <h1 class="text-primary" style="margin:0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:28px; line-height:1.3; color:#134e1e;">
+                Welcome to Product
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Greeting and message -->
+          <tr>
+            <td class="px" align="left" style="padding: 12px 32px 0 32px;">
+              <p class="text-body" style="margin:0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:16px; line-height:1.6; color:#1f2937;">
+                {{#if first_name}}Hi {{first_name}},{{else}}Hi there,{{/if}}
+              </p>
+              <p class="text-body" style="margin:8px 0 0 0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:16px; line-height:1.6; color:#1f2937;">
+                Your account is all set and ready to go. You can sign in now to explore your dashboard, manage orders, and access member features.
+              </p>
+            </td>
+          </tr>
+
+          <!-- CTA Button -->
+          <tr>
+            <td align="center" style="padding: 24px 32px 8px 32px;">
+              <!--[if mso]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{#if login_url}}{{login_url}}{{else}}{{base_url}}/login.php{{/if}}" style="height:48px;v-text-anchor:middle;width:260px;" arcsize="12%" stroke="f" fillcolor="#2E7D32">
+                <w:anchorlock/>
+                <center style="color:#ffffff;font-family:Arial, sans-serif;font-size:16px;font-weight:bold;">Sign in to your account</center>
+              </v:roundrect>
+              <![endif]-->
+              <!--[if !mso]><!-- -->
+              <a class="btn" href="{{#if login_url}}{{login_url}}{{else}}{{base_url}}/login.php{{/if}}" target="_blank" style="background-color:#2E7D32; color:#ffffff; display:inline-block; font-family:-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:16px; font-weight:700; line-height:48px; text-align:center; text-decoration:none; width:260px; border-radius:8px;">
+                Sign in to your account
+              </a>
+              <!--<![endif]-->
+            </td>
+          </tr>
+
+          <!-- Info blurb: upcoming verification -->
+          <tr>
+            <td class="px" align="left" style="padding: 8px 32px 0 32px;">
+              <p class="text-body" style="margin:0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:14px; line-height:1.7; color:#4b5563;">
+                For added security, a brief verification step will be introduced soon. You may be prompted to verify your email or device on a future login. We’ll let you know before this change goes live.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 24px 32px 0 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="border-top:1px solid #e5e7eb; height:1px; line-height:1px; font-size:0;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Secondary content -->
+          <tr>
+            <td class="px" align="left" style="padding: 20px 32px 8px 32px;">
+              <p class="text-body" style="margin:0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:14px; line-height:1.7; color:#374151;">
+                Tip: Your username is the email address you used to sign up. If you didn’t create this account, please contact us right away.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Help -->
+          <tr>
+            <td class="px" align="left" style="padding: 8px 32px 24px 32px;">
+              <p class="text-body" style="margin:0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:14px; line-height:1.7; color:#374151;">
+                Need help? Reply to this email or reach us at
+                <a href="mailto:sample-015@example.com" style="color:#2E7D32; text-decoration:underline;">sample-015@example.com</a>.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 16px 24px 28px 24px; background-color:#f8fafc; border-radius:0 0 12px 12px;">
+              <p style="margin:0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size:12px; line-height:1.6; color:#6b7280;">
+                You’re receiving this email because you created an account at
+                <a href="{{base_url}}" target="_blank" style="color:#2E7D32; text-decoration:underline;">Product‑It Product</a>.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  {{#if agent_name}}
+  <div style="max-width:600px;margin:24px auto 0 auto;padding:24px 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;line-height:1.6;">
+    <p style="margin:0 0 6px;font-size:14px;color:#374151;">Need help? Contact your Product sales rep directly:</p>
+    <p style="margin:0;font-size:14px;color:#1f2937;">
+      <strong>{{agent_name}}</strong><br>
+      <span style="color:#64748b;">Sales Representative, Product</span><br>
+      <span style="color:#64748b;">📧 {{agent_email}}</span>{{#if agent_phone}}<br><span style="color:#64748b;">📱 {{agent_phone}}</span>{{/if}}
+    </p>
+  </div>
+  {{/if}}
+  {{tracking_pixel}}
+</body>
+</html>
+
+

@@ -1,0 +1,263 @@
+/**
+ * Product Accordion Component Styles
+ * Modern, smooth, professional accordion with theme support
+ */
+
+.product-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+/* Controls (Expand All / Collapse All) */
+.product-accordion-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.product-accordion-expand-all,
+.product-accordion-collapse-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.product-accordion-expand-all:hover,
+.product-accordion-collapse-all:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #475569;
+}
+
+/* Section Container */
+.product-accordion-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-accordion-section:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product-accordion-section-expanded {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.product-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.product-accordion-header:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: -2px;
+}
+
+.product-accordion-header:active {
+    transform: scale(0.99);
+}
+
+/* Theme Variations */
+.product-accordion-section[data-theme="blue"] .product-accordion-header {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.product-accordion-section[data-theme="blue"].product-accordion-section-expanded .product-accordion-header {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: #ffffff;
+}
+
+.product-accordion-section[data-theme="purple"] .product-accordion-header {
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+}
+
+.product-accordion-section[data-theme="purple"].product-accordion-section-expanded .product-accordion-header {
+    background: linear-gradient(135deg, #9333ea, #a855f7);
+    color: #ffffff;
+}
+
+.product-accordion-section[data-theme="green"] .product-accordion-header {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+}
+
+.product-accordion-section[data-theme="green"].product-accordion-section-expanded .product-accordion-header {
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: #ffffff;
+}
+
+.product-accordion-section[data-theme="gray"] .product-accordion-header {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+
+.product-accordion-section[data-theme="gray"].product-accordion-section-expanded .product-accordion-header {
+    background: linear-gradient(135deg, #475569, #64748b);
+    color: #ffffff;
+}
+
+/* Header Content */
+.product-accordion-header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.product-accordion-icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.product-accordion-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.product-accordion-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1e293b;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-accordion-section-expanded .product-accordion-badge {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+/* Chevron Icon */
+.product-accordion-chevron {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.product-accordion-section-expanded .product-accordion-chevron {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+.product-accordion-section-expanded .product-accordion-header .product-accordion-chevron {
+    stroke: currentColor;
+}
+
+/* Content */
+.product-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.product-accordion-content-inner {
+    padding: 20px;
+    background: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .product-accordion-header {
+        padding: 14px 16px;
+    }
+    
+    .product-accordion-header-content {
+        gap: 10px;
+    }
+    
+    .product-accordion-title {
+        font-size: 14px;
+    }
+    
+    .product-accordion-icon {
+        font-size: 18px;
+    }
+    
+    .product-accordion-content-inner {
+        padding: 16px;
+    }
+    
+    .product-accordion-controls {
+        flex-wrap: wrap;
+    }
+}
+
+/* Accessibility - High Contrast Mode */
+@media (prefers-contrast: high) {
+    .product-accordion-section {
+        border: 2px solid #000;
+    }
+    
+    .product-accordion-header:focus {
+        outline: 3px solid #000;
+    }
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .product-accordion-section,
+    .product-accordion-header,
+    .product-accordion-chevron,
+    .product-accordion-content {
+        transition: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .product-accordion-controls {
+        display: none;
+    }
+    
+    .product-accordion-section {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .product-accordion-content {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

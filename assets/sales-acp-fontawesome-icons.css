@@ -1,0 +1,195 @@
+/**
+ * Sales ACP FontAwesome Icon Styling
+ * Ensures proper spacing and alignment for FontAwesome icons
+ * @version 1.0.0
+ */
+
+/* Icon spacing in navigation links */
+.sacp_link i,
+.sacp_dropdown-toggle i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Icon spacing in dropdown items */
+.sacp_dropdown-item i {
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* Mobile section title icons */
+.sacp_mobile-section-title i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Admin toggle icons */
+.sacp_admin-toggle i {
+    margin-right: 6px;
+}
+
+/* User avatar - keep text-based for initials */
+.sacp_user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--sacp-gold) 0%, var(--sacp-gold-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--sacp-white);
+    font-size: 14px;
+    box-shadow: var(--sacp-shadow-gold);
+}
+
+/* Feedback trigger pulse with icon */
+.sacp_feedback-trigger i {
+    margin-right: 8px;
+}
+
+/* Badge positioning with icons */
+.sacp_link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.sacp_badge {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    min-width: 18px;
+}
+
+/* Dropdown arrow spacing */
+.sacp_dropdown-arrow {
+    margin-left: 4px;
+    font-size: 10px;
+    opacity: 0.7;
+    transition: transform 200ms ease;
+}
+
+.sacp_dropdown.open .sacp_dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Icon color inheritance */
+.sacp_link i,
+.sacp_dropdown-item i,
+.sacp_admin-toggle i {
+    color: inherit;
+}
+
+/* Icon hover effects */
+.sacp_link:hover i,
+.sacp_dropdown-item:hover i {
+    color: inherit;
+}
+
+/* Active state icons */
+.sacp_link.active i,
+.sacp_dropdown-item.active i {
+    color: inherit;
+}
+
+/* Mobile menu icon spacing */
+.sacp_overflow-btn i {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+/* Mobile menu items */
+.sacp_overflow-menu .sacp_link i {
+    margin-right: 10px;
+    width: 18px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sacp_link i,
+    .sacp_dropdown-toggle i {
+        margin-right: 6px;
+        width: 14px;
+        font-size: 14px;
+    }
+    
+    .sacp_dropdown-item i {
+        margin-right: 10px;
+        width: 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even tighter spacing on small screens */
+    .sacp_link i {
+        margin-right: 4px;
+    }
+}
+
+/* Fix icon alignment in flex containers */
+.sacp_link,
+.sacp_dropdown-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure dropdown descriptions don't interfere with icons */
+.sacp_dropdown-desc {
+    margin-left: 32px; /* Account for icon width */
+}
+
+/* FontAwesome specific fixes */
+.fa, .fas, .far, .fal, .fab {
+    vertical-align: middle;
+}
+
+/* Spinner icons for loading states */
+.fa-spinner {
+    animation: fa-spin 1s infinite linear;
+}
+
+@keyframes fa-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Icon size variants */
+.sacp_link i.fa-lg {
+    width: 20px;
+    font-size: 18px;
+}
+
+.sacp_link i.fa-sm {
+    width: 14px;
+    font-size: 12px;
+}
+
+/* Icon colors for specific states */
+.sacp_link.active i {
+    opacity: 1;
+}
+
+.sacp_link:not(.active) i {
+    opacity: 0.9;
+}
+
+/* Notification badge with icons */
+.sacp_link:has(.sacp_badge) {
+    padding-right: 28px; /* Make room for badge */
+}
+
+

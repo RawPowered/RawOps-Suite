@@ -1,0 +1,400 @@
+/**
+ * Sales ACP Radial Menu Styles
+ * Unified floating action menu with 8 radial positions
+ * Mobile & desktop responsive
+ */
+
+:root {
+    --radial-primary: #0066FF;
+    --radial-success: #059669;
+    --radial-danger: #dc2626;
+    --radial-warning: #d97706;
+    --radial-info: #0369a1;
+    --radial-purple: #7c3aed;
+    --radial-radius-desktop: 120px;
+    --radial-radius-mobile: 90px;
+}
+
+/* Main Container */
+.radial-menu {
+    position: fixed;
+    bottom: 24px;
+    right: 100px; /* Left of AI chat button (at right: 20px) */
+    z-index: 999; /* Below AI chat (1000) but above most content */
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.radial-menu.expanded {
+    /* Center the expanded menu in viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    right: auto;
+}
+
+.radial-menu * {
+    pointer-events: auto;
+}
+
+/* Center Button */
+.radial-center {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--radial-primary), #60A5FA);
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4), 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 1003; /* Above all radial items */
+}
+
+.radial-center:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 35px rgba(0, 102, 255, 0.4), 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.radial-center:active {
+    transform: scale(0.95);
+}
+
+.radial-center .center-icon {
+    font-size: 32px;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.radial-menu.expanded .radial-center .center-icon {
+    transform: rotate(135deg) scale(1.1);
+}
+
+/* Badge on center button */
+.radial-center .badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--radial-danger);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Radial Items Container */
+.radial-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: 1001; /* Above backdrop (998) */
+}
+
+.radial-items > * {
+    pointer-events: auto;
+}
+
+/* Individual Radial Item */
+.radial-item {
+    position: absolute;
+    min-width: 90px;
+    height: auto;
+    border-radius: 12px;
+    background: white;
+    color: #1f2937;
+    border: 2px solid #e5e7eb;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 12px;
+    font-size: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center;
+    z-index: 1002; /* Above items container and backdrop */
+}
+
+.radial-menu.expanded .radial-item {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.radial-item:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.radial-item:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Item badge */
+.radial-item .item-badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background: var(--radial-danger);
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    box-shadow: 0 2px 6px rgba(220, 38, 38, 0.3);
+}
+
+/* Item label (always visible) */
+.radial-item .item-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #4b5563;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Specific item colors */
+.radial-item.item-call {
+    border-color: var(--radial-danger);
+}
+
+.radial-item.item-call:hover {
+    background: var(--radial-danger);
+    color: white;
+}
+
+.radial-item.item-note {
+    border-color: var(--radial-info);
+}
+
+.radial-item.item-note:hover {
+    background: var(--radial-info);
+    color: white;
+}
+
+.radial-item.item-task {
+    border-color: var(--radial-purple);
+}
+
+.radial-item.item-task:hover {
+    background: var(--radial-purple);
+    color: white;
+}
+
+.radial-item.item-sample {
+    border-color: var(--radial-success);
+}
+
+.radial-item.item-sample:hover {
+    background: var(--radial-success);
+    color: white;
+}
+
+.radial-item.item-invoice {
+    border-color: var(--radial-warning);
+}
+
+.radial-item.item-invoice:hover {
+    background: var(--radial-warning);
+    color: white;
+}
+
+/* Highlight/nudge for important items */
+.radial-item.item-highlight {
+    border-color: var(--radial-success);
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.6), 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: itemPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes itemPulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.6), 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+        box-shadow: 0 0 0 8px rgba(5, 150, 105, 0), 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Backdrop */
+.radial-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 998; /* Just below menu (999), below AI chat (1000) */
+}
+
+.radial-backdrop.active {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    pointer-events: auto;
+}
+
+/* Stagger animation delays for items */
+.radial-item:nth-child(1) { transition-delay: 0.05s; }
+.radial-item:nth-child(2) { transition-delay: 0.1s; }
+.radial-item:nth-child(3) { transition-delay: 0.15s; }
+.radial-item:nth-child(4) { transition-delay: 0.2s; }
+.radial-item:nth-child(5) { transition-delay: 0.25s; }
+.radial-item:nth-child(6) { transition-delay: 0.3s; }
+.radial-item:nth-child(7) { transition-delay: 0.35s; }
+.radial-item:nth-child(8) { transition-delay: 0.4s; }
+
+/* Stats mini widget (12 o'clock position) */
+.radial-item.item-stats {
+    min-width: 100px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.radial-item.item-stats .stats-circle {
+    width: 52px;
+    height: 52px;
+    position: relative;
+}
+
+.radial-item.item-stats .stats-value {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--radial-primary);
+}
+
+.radial-item.item-stats .stats-percent {
+    font-size: 10px;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .radial-menu {
+        bottom: 16px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .radial-menu.expanded {
+        /* Keep centered on mobile too */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .radial-center {
+        width: 60px;
+        height: 60px;
+    }
+
+    .radial-item {
+        min-width: 80px;
+        font-size: 20px;
+        padding: 8px 10px;
+    }
+
+    .radial-item .item-label {
+        font-size: 10px;
+    }
+
+    /* Tighter spacing on mobile */
+    :root {
+        --radial-radius-mobile: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .radial-center {
+        width: 56px;
+        height: 56px;
+    }
+
+    .radial-center .center-icon {
+        font-size: 24px;
+    }
+
+    .radial-item {
+        min-width: 75px;
+        font-size: 18px;
+        padding: 7px 9px;
+    }
+
+    .radial-item .item-label {
+        font-size: 9px;
+    }
+}
+
+/* Accessibility - reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .radial-center,
+    .radial-item,
+    .radial-backdrop {
+        transition: none;
+        animation: none;
+    }
+
+    .radial-item {
+        transition-delay: 0s !important;
+    }
+}
+
+/* Print - hide radial menu */
+@media print {
+    .radial-menu {
+        display: none !important;
+    }
+}
+
+/* Focus styles for accessibility */
+.radial-center:focus,
+.radial-item:focus {
+    outline: 3px solid var(--radial-primary);
+    outline-offset: 2px;
+}
+
+.radial-center:focus:not(:focus-visible),
+.radial-item:focus:not(:focus-visible) {
+    outline: none;
+}
+

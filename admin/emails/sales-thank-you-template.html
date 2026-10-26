@@ -1,0 +1,87 @@
+<p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #334155;">
+Hi <strong>{{first_name}}</strong>,
+</p>
+
+<div style="background: linear-gradient(135deg, #7c3aed, #a78bfa); padding: 32px; border-radius: 12px; text-align: center; margin: 0 0 24px;">
+    <p style="margin: 0 0 12px; font-size: 40px;">🎉</p>
+    <p style="margin: 0 0 8px; color: #ffffff; font-size: 24px; font-weight: 700;">
+        Thank You!
+    </p>
+    <p style="margin: 0; color: rgba(255,255,255,0.95); font-size: 14px;">
+        Your order has been received
+    </p>
+</div>
+
+<p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #334155;">
+Thank you so much for your order! We truly appreciate your business and partnership with Product.
+</p>
+
+<!-- Order Summary Box -->
+<div style="background: linear-gradient(135deg, #ede9fe, #ddd6fe); border: 2px solid #c4b5fd; border-radius: 12px; padding: 20px; margin: 0 0 24px;">
+    <p style="margin: 0 0 12px; font-size: 18px; color: #5b21b6; font-weight: 700;">
+        Order #{{order_number}}
+    </p>
+    <p style="margin: 0 0 12px; font-size: 14px; color: #6b21a8;">
+        <strong>Order Date:</strong> {{order_date}}<br>
+        <strong>Total:</strong> <span style="font-size: 20px; font-weight: 700;">${{order_total}}</span>
+    </p>
+    <p style="margin: 0; font-size: 13px; color: #7c3aed;">
+        ℹ️ You'll receive shipping confirmation within 1-2 business days
+    </p>
+</div>
+
+<!-- What's Next Section -->
+<p style="margin: 0 0 16px; font-size: 18px; color: #1e293b; font-weight: 700;">
+What Happens Next?
+</p>
+
+<div style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+    <p style="margin: 0 0 8px; font-size: 15px; color: #1e293b;">
+        <span style="font-size: 20px; margin-right: 8px;">✅</span><strong>Order Processing</strong>
+    </p>
+    <p style="margin: 0; color: #64748b; font-size: 14px;">
+        Our team is preparing your order for shipment
+    </p>
+</div>
+
+<div style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+    <p style="margin: 0 0 8px; font-size: 15px; color: #1e293b;">
+        <span style="font-size: 20px; margin-right: 8px;">📦</span><strong>Quality Check & Pack</strong>
+    </p>
+    <p style="margin: 0; color: #64748b; font-size: 14px;">
+        Every order is inspected for quality before shipping
+    </p>
+</div>
+
+<div style="padding: 12px 0; margin-bottom: 24px;">
+    <p style="margin: 0 0 8px; font-size: 15px; color: #1e293b;">
+        <span style="font-size: 20px; margin-right: 8px;">🚚</span><strong>Ship & Track</strong>
+    </p>
+    <p style="margin: 0; color: #64748b; font-size: 14px;">
+        You'll receive tracking information via email
+    </p>
+</div>
+
+<p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #334155;">
+If you have any questions about your order or need anything else, I'm here to help!
+</p>
+
+<!-- Support CTA -->
+<table role="presentation" style="margin: 0 0 30px;">
+    <tr>
+        <td align="center">
+            <a href="mailto:{{agent_email}}?subject=Question About Order {{order_number}}" style="display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #7c3aed, #a78bfa); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; box-shadow: 0 2px 8px rgba(124,58,237,0.3);">
+                Contact Your Sales Rep
+            </a>
+        </td>
+    </tr>
+</table>
+
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #334155;">
+Thank you for choosing Product!<br><br>
+<strong>{{agent_name}}</strong><br>
+<span style="color: #64748b; font-size: 14px;">Your Sales Representative</span><br>
+<span style="color: #64748b; font-size: 14px;">Product</span><br>
+<span style="color: #64748b; font-size: 13px;">📧 {{agent_email}}</span>
+</p>
+{{tracking_pixel}}
