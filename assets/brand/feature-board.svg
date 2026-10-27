@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="922" viewBox="0 0 1280 922" role="img" aria-labelledby="title desc">
+<title id="title">RawOps Suite feature board</title>
+<desc id="desc">A quick view of the preserved business system: Product Formulator, LMS and training, CRM and shop discovery, contextual chat and writing, marketing automation, samples and accounts, agent cards, finance, production, legal records, access and activity, responsive portals and APIs. Public source and eleven historical captures support the showcase; current runtime is unvalidated.</desc>
+<path d="M1 1h1216l62 56v864H37L1 885z" fill="#090A0B" stroke="#373A3D" stroke-width="2"/>
+<path d="M1 1h458l-8 7H1z" fill="#D5FF3F"/>
+<path d="M1088 1h129l62 56v114z" fill="#1B1D1F"/>
+<g font-family="Arial,sans-serif">
+<text x="34" y="48" fill="#D5FF3F" font-size="15" letter-spacing="3" font-weight="700">RAWPOWERED / BUSINESS SYSTEMS</text>
+<text x="30" y="116" fill="#F7F8F9" font-size="62" letter-spacing="-2" font-weight="700">RawOps Suite</text>
+<text x="34" y="157" fill="#B9BEC2" font-size="23">Product knowledge. Prepared teams. Connected business operations.</text>
+
+<g transform="translate(32 192)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M5 5h22v22H5z M10 11h12 M10 16h8 M10 21h10"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Product Formulator</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Ingredients, recipes and costing</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Catalog, pricing and product data</text>
+</g>
+<g transform="translate(442 192)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M3 7q7-4 13 0v22q-6-4-13 0z M16 7q7-4 13 0v22q-6-4-13 0 M7 12h5 M20 12h5"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">LMS + Agent Training</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Modules, quizzes and sales practice</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Product-aware lessons and progress</text>
+</g>
+<g transform="translate(852 192)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M16 29s10-11 10-18a10 10 0 0 0-20 0c0 7 10 18 10 18 M12 11a4 4 0 1 0 8 0a4 4 0 1 0-8 0"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">CRM + Shop Discovery</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Category and location searches</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Leads, contacts, calls and tasks</text>
+</g>
+<g transform="translate(32 342)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M3 4h26v19H14l-8 6v-6H3z M9 10h14 M9 16h9"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Chat + Assisted Writing</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Product and customer context</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Drafts, tone and review controls</text>
+</g>
+<g transform="translate(442 342)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M2 7h28v18H2z M2 7l14 11L30 7 M22 28h8 M27 25l3 3-3 3"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Marketing + Automation</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Templates and scheduled follow-ups</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Queues, provider events and reports</text>
+</g>
+<g transform="translate(852 342)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M3 10l13-7 13 7v15l-13 7-13-7z M3 10l13 7 13-7 M16 17v15 M9 6l13 8"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Samples + Store Accounts</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Requests, fulfillment and shipment</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Signup, follow-up and account history</text>
+</g>
+<g transform="translate(32 492)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M2 6h28v22H2z M7 12h6v6H7z M18 12h8 M18 17h6 M7 23h17"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Agent Tools + Cards</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Digital business cards, QR and vCard</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Referral links and agent workspaces</text>
+</g>
+<g transform="translate(442 492)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M6 2h20v29l-4-3-6 3-6-3-4 3z M11 9h10 M11 15h10 M11 21h6"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Orders + Finance</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Invoices, commissions and ledgers</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Expenses, suppliers and tax records</text>
+</g>
+<g transform="translate(852 492)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M3 14h10v15H3z M19 14h10v15H19z M11 2h10v8H11z M16 10v4 M8 14v-3h16v3"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Production + Inventory</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Stock, materials and packaging</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Recipe and work-order interfaces</text>
+</g>
+<g transform="translate(32 642)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8h10l3 4h13v17H3z M8 20h16 M10 17v6 M17 17v6 M23 17v6"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Legal Case Workspace</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Timelines, evidence and documents</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Teams, notes and access requests</text>
+</g>
+<g transform="translate(442 642)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M16 2l12 5v9c0 7-12 15-12 15S4 23 4 16V7z M9 16h4l3-6 3 11 3-5h3"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Access + Activity</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Roles, sessions and access checks</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">Time, progress and usage metrics</text>
+</g>
+<g transform="translate(852 642)">
+<path d="M0 0h374l20 20v114H0z" fill="#151719" stroke="#373A3D"/>
+<path d="M0 0h54l-5 4H0z" fill="#D5FF3F"/>
+<path d="M356 0h18l20 20v18z" fill="#222527"/>
+<g transform="translate(17 16)" fill="none" stroke="#D5FF3F" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"><path d="M2 4h28v23H2z M2 10h28 M11 15l-5 4 5 4 M21 15l5 4-5 4 M18 13l-4 12"/></g>
+<text x="62" y="39" fill="#F7F8F9" font-size="22" font-weight="700">Web + API Platform</text>
+<text x="20" y="80" fill="#B9BEC2" font-size="18">Responsive portals and technical SEO</text>
+<text x="20" y="108" fill="#B9BEC2" font-size="18">PHP, MySQL and provider integrations</text>
+</g>
+<path d="M32 811h1216" stroke="#373A3D"/>
+<g fill="#D5FF3F" font-size="15" font-weight="700" letter-spacing="1">
+<text x="34" y="845">PUBLIC IMPLEMENTATION</text><text x="444" y="845">122 API SOURCE FILES</text><text x="854" y="845">11 HISTORICAL CAPTURES</text>
+</g>
+<text x="34" y="884" fill="#B9BEC2" font-size="16">Preserved history of a previously functional system. Current deployment and provider connectivity remain unvalidated.</text>
+</g></svg>

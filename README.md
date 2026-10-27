@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="assets/brand/hero.svg" alt="RawOps Suite: CRM, sales enablement, automation and business operations" width="100%">
+<a href="docs/CAPABILITY-CATALOG.md"><img src="assets/brand/feature-board.svg" alt="RawOps Suite feature board: Product Formulator, LMS and training, CRM, assisted writing, marketing automation, samples and accounts, agent cards, finance, production, legal records, access and activity, web portals and APIs" width="100%"></a>
 
 **A business platform connecting product knowledge, sales activity, customer relationships and internal operations.**
 
