@@ -95,6 +95,8 @@ Inspect [case access checks](../required/legal-permissions.php), [case services]
 
 [See the redacted timeline and access interface](evidence/GALLERY.md#legal-evidence-timeline--6-october-2025). All case identities, timeline entries and document titles are covered. Private evidence files are excluded. The showcase makes no claim about legal outcomes, evidentiary admissibility or certified chain of custody.
 
+The [dedicated Legal Workspace showcase](https://github.com/RawPowered/RawOps-Legal-Workspace) pairs the redacted interfaces and implementation map with an exact excerpt from an external reviewer who reported downloading the evidence and finding the portal organized and easy to follow. The original correspondence and case contents remain private.
+
 ## 7. Make progress and operational gaps visible
 
 **The need:** managers needed to understand where work stood, where records were incomplete and where someone might need help.

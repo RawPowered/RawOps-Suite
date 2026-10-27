@@ -84,6 +84,8 @@ Representative source: [trainee workspace](../onboarding/trainee/), [learning mo
 
 ## Legal and access workflows
 
+[Dedicated legal workspace showcase: interface evidence, reviewer feedback and implementation](https://github.com/RawPowered/RawOps-Legal-Workspace).
+
 - Maintain legal case records, parties, notes, team assignments, document metadata and access requests.
 - Organize evidence using timeline dates, horizontal/vertical timeline views and sorting controls.
 - Support lawyer review of organized chronology and records. The feature walkthrough includes my firsthand usage account.

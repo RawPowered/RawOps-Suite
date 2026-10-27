@@ -24,6 +24,10 @@ You can inspect the application screens, follow the workflows and read the code 
 | **20 October 2025: CRM data quality** | **143 detailed leads, 241 incomplete leads and 69 email chains** appear in the capture below. It shows the system exposing incomplete records and follow-up coverage. |
 | **Legal case organization** | I used the workspace to retain chronology and evidence and organize material for lawyers, reducing the additional sorting needed to review the records. <a href="docs/FEATURE-WALKTHROUGH.md#6-organize-legal-work-for-review"><img src="assets/brand/actions/legal-workflow-evidence.svg" alt="Firsthand account, interface and source" height="34"></a> |
 
+**External reviewer feedback on the legal portal:** “It's so organized and easy to follow!”
+
+<a href="https://github.com/RawPowered/RawOps-Legal-Workspace"><img src="assets/brand/actions/legal-workspace.svg" alt="Explore the dedicated legal workspace showcase and reviewer feedback" height="38"></a>
+
 Each snapshot reflects its own date and filter window. Revenue and conversion attribution are outside this evidence. The legal account describes my experience; no measured time or fee savings are claimed.
 
 <table>
