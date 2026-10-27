@@ -59,6 +59,16 @@ Each step has its own records, statuses and user actions. Sample outreach does n
 
 The walkthrough distinguishes captured interface behavior from source-backed capabilities. The assistant screenshot shows its welcome state; the linked handlers show context assembly and model integration.
 
+<h2 id="product-learning"><img src="assets/brand/section-product-learning.svg" alt="Design case: Product Formulator, LMS, training and marketing" width="100%"></h2>
+
+**For design reviewers: follow the product knowledge.** Product formulation and catalog tools define the operational detail; LMS authoring, lessons and practice help agents understand it; email templates and assisted drafts bring relevant information into customer conversations.
+
+<a href="docs/PRODUCT-LEARNING-DESIGN.md"><img src="docs/diagrams/product-learning-design.svg" alt="Product Formulator and catalog relationships, shared lesson and email rendering, training and marketing, with editorial review boundaries" width="100%"></a>
+
+The case explains shared values, authored content, interface choices and review of assisted output. It includes genuine learning and composer captures, source references and an interview walkthrough relevant to AI Tutor, Design roles. Recipe-to-catalog publication remains an editorial handoff in this diagram; automatic propagation across every edit path is unverified.
+
+<a href="docs/PRODUCT-LEARNING-DESIGN.md"><img src="assets/brand/actions/product-learning-design.svg" alt="Explore product and learning design" height="38"></a>
+
 <h2 id="scope"><img src="assets/brand/section-scope.svg" alt="Explore the full platform" width="100%"></h2>
 
 <a href="docs/diagrams/systems-orchestration.png"><img src="docs/diagrams/systems-orchestration.svg" alt="RawOps Suite systems orchestration: role workspaces, business workflows, shared services, MySQL records, external providers and operational visibility" width="100%"></a>
@@ -104,6 +114,7 @@ The implementation is available for review: **437 PHP files, 33 standalone JavaS
 | Your opening | A useful place to start |
 |:--|:--|
 | **CRM, business systems or support operations** | <a href="docs/FEATURE-WALKTHROUGH.md#2-find-shops-and-prepare-relevant-outreach"><img src="assets/brand/actions/crm-delivery.svg" alt="Shop discovery through customer follow-up" height="34"></a><br><a href="docs/WORKFLOWS.md"><img src="assets/brand/actions/workflow-handoffs.svg" alt="workflow handoffs" height="34"></a> |
+| **AI Tutor, Design or learning experience** | <a href="docs/PRODUCT-LEARNING-DESIGN.md"><img src="assets/brand/actions/product-learning-design.svg" alt="Product formulation, learning and marketing design case" height="34"></a> |
 | **AI product or API integration** | <a href="docs/FEATURE-WALKTHROUGH.md#3-put-assistance-inside-the-sales-workspace"><img src="assets/brand/actions/contextual-ai.svg" alt="Contextual assistance" height="34"></a><br><a href="api/ai-email-composer.php"><img src="assets/brand/actions/source-email-composer.svg" alt="composer implementation" height="34"></a> |
 | **Learning platforms or sales enablement** | <a href="docs/FEATURE-WALKTHROUGH.md#1-keep-sales-training-connected-to-the-product"><img src="assets/brand/actions/learning-and-enablement.svg" alt="Product-aware training" height="34"></a><br><a href="api/training-heartbeat.php"><img src="assets/brand/actions/source-training-heartbeat.svg" alt="progress instrumentation" height="34"></a> |
 | **Internal tools, operations or technical product delivery** | <a href="docs/FEATURE-WALKTHROUGH.md#6-organize-legal-work-for-review"><img src="assets/brand/actions/legal-operations.svg" alt="Legal organization" height="34"></a><br><a href="docs/FEATURE-WALKTHROUGH.md#7-make-progress-and-operational-gaps-visible"><img src="assets/brand/actions/operational-metrics.svg" alt="operational metrics" height="34"></a><br><a href="docs/ENGINEERING-CASE-NOTES.md"><img src="assets/brand/actions/engineering-decisions.svg" alt="engineering decisions" height="34"></a> |
@@ -123,4 +134,3 @@ The code is a historical source archive. Older provider/model endpoints, migrati
 The main branch contains the current portfolio presentation.
 
 <a href="https://github.com/RawPowered/RawOps-Suite/releases/tag/v1.0.1-showcase"><img src="assets/brand/actions/source-release-v1-0-1.svg" alt="v1.0.1-showcase" height="38"></a> <a href="RIGHTS.md"><img src="assets/brand/actions/rights-and-reuse.svg" alt="Rights and reuse" height="38"></a>
-

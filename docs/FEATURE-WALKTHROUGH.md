@@ -20,6 +20,8 @@ Inspect [training helpers](../required/training-helpers.php), [shortcode renderi
 
 [See the historical training progression screen](evidence/GALLERY.md#training-progression--14-september-2025).
 
+Explore the [Product Formulator, LMS, training and marketing design case](PRODUCT-LEARNING-DESIGN.md) for the shared-data relationships, source references and design-review questions.
+
 ## 2. Find shops and prepare relevant outreach
 
 **The need:** an agent needed to locate suitable businesses, build useful lead records and prepare a relevant first contact.
@@ -124,4 +126,3 @@ These are concrete controls visible in the source. The historical evidence-locke
 ## Continue exploring
 
 The [capability catalog](CAPABILITY-CATALOG.md) covers the wider build, including inventory, production, accounting, suppliers, invoices, commissions, customer portals and website presentation. [Workflow diagrams](WORKFLOWS.md) show the handoffs. [API source index](API-INDEX.md) provides a direct route into the implementation.
-

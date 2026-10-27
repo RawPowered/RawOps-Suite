@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="670" viewBox="0 0 1280 670" role="img" aria-labelledby="title desc">
+<title id="title">RawOps Suite: product knowledge across learning and marketing</title>
+<desc id="desc">Product Formulator and recipe tools connect through an editorial catalog handoff. Catalog fields supply shared shortcode rendering and model context. LMS lessons, agent training and marketing templates use those values. Solid arrows show source-backed data use; a dashed arrow marks the editorial handoff whose automatic execution is unverified.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0l10 5-10 5z" fill="#D5FF3F"/></marker></defs>
+<path d="M1 1h1238l40 37v631H30L1 640z" fill="#090A0B" stroke="#373A3D"/>
+<path d="M1 1h390l-8 6H1z" fill="#D5FF3F"/>
+<g font-family="Arial,sans-serif">
+<text x="32" y="43" fill="#D5FF3F" font-size="14" letter-spacing="2">RAWOPS SUITE / PRODUCT + LEARNING DESIGN</text>
+<text x="32" y="85" fill="#F7F8F9" font-size="30" font-weight="700">One product story. Several working interfaces.</text>
+<path d="M32 116h410l20 20v127H32z" fill="#151719" stroke="#373A3D"/>
+<text x="54" y="150" fill="#D5FF3F" font-size="13" letter-spacing="1">01 / PRODUCT FORMULATOR</text>
+<text x="54" y="185" fill="#F7F8F9" font-size="23" font-weight="700">Define the operational detail</text>
+<text x="54" y="215" fill="#B9BEC2" font-size="17">Ingredients Â· recipe versions Â· batch yield</text>
+<text x="54" y="242" fill="#B9BEC2" font-size="17">Packaging Â· material and cost factors</text>
+<path d="M700 116h528l20 20v127H700z" fill="#151719" stroke="#373A3D"/>
+<text x="722" y="150" fill="#D5FF3F" font-size="13" letter-spacing="1">02 / PUBLISHED PRODUCT FIELDS</text>
+<text x="722" y="185" fill="#F7F8F9" font-size="23" font-weight="700">Maintain the sellable product</text>
+<text x="722" y="215" fill="#B9BEC2" font-size="17">Price Â· description Â· serving values Â· SKU</text>
+<text x="722" y="242" fill="#B9BEC2" font-size="17">Training eligibility and learning context</text>
+<path d="M468 190H688" stroke="#D5FF3F" stroke-width="2" stroke-dasharray="7 6" fill="none" marker-end="url(#arrow)"/>
+<text x="580" y="161" text-anchor="middle" fill="#F7F8F9" font-size="16">Review and update</text>
+<text x="580" y="221" text-anchor="middle" fill="#B9BEC2" font-size="14">Editorial handoff</text>
+<path d="M974 263v37" stroke="#D5FF3F" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M32 308h1196l20 20v51H32z" fill="#1B1D1F" stroke="#D5FF3F"/>
+<text x="54" y="337" fill="#F7F8F9" font-size="21" font-weight="700">Shared product values</text>
+<text x="54" y="362" fill="#B9BEC2" font-size="16">Catalog reads + reusable shortcodes + product context for assisted drafts</text>
+<path d="M328 379v43" fill="none" stroke="#D5FF3F" stroke-width="2" marker-end="url(#arrow)"/><path d="M952 379v43" fill="none" stroke="#D5FF3F" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M32 434h572l20 20v139H32z" fill="#151719" stroke="#373A3D"/>
+<text x="54" y="468" fill="#D5FF3F" font-size="13" letter-spacing="1">03 / LMS + AGENT TRAINING</text>
+<text x="54" y="503" fill="#F7F8F9" font-size="23" font-weight="700">Understand, practice and review</text>
+<text x="54" y="534" fill="#B9BEC2" font-size="17">Authored lessons + dynamic product examples</text>
+<text x="54" y="560" fill="#B9BEC2" font-size="17">Quizzes Â· sales workouts Â· progress records</text>
+<text x="54" y="582" fill="#B9BEC2" font-size="14">Synchronization tools and missing-reference checks</text>
+<path d="M656 434h572l20 20v139H656z" fill="#151719" stroke="#373A3D"/>
+<text x="678" y="468" fill="#D5FF3F" font-size="13" letter-spacing="1">04 / MARKETING + CUSTOMER COMMUNICATION</text>
+<text x="678" y="503" fill="#F7F8F9" font-size="23" font-weight="700">Prepare a relevant conversation</text>
+<text x="678" y="534" fill="#B9BEC2" font-size="17">Email templates + contextual assisted drafts</text>
+<text x="678" y="560" fill="#B9BEC2" font-size="17">Tone Â· layout Â· saved drafts Â· agent review</text>
+<text x="678" y="582" fill="#B9BEC2" font-size="14">Agent cards connect to signup and sample requests</text>
+<path d="M32 625h30" stroke="#D5FF3F" stroke-width="2"/>
+<text x="74" y="630" fill="#B9BEC2" font-size="14">Source-backed data use</text>
+<path d="M310 625h30" stroke="#D5FF3F" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="352" y="630" fill="#B9BEC2" font-size="14">Editorial handoff; automatic propagation unverified</text>
+<text x="32" y="652" fill="#B9BEC2" font-size="13">Architecture reading guide. Historical source and captured interfaces; no new runtime execution or measured learning outcome.</text>
+</g></svg>

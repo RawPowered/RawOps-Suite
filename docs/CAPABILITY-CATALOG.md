@@ -72,6 +72,8 @@ Representative source: [assisted email composer](../api/ai-email-composer.php), 
 
 ## Training and enablement
 
+[Connected design case: Product Formulator, LMS, training and marketing](PRODUCT-LEARNING-DESIGN.md).
+
 - Organize material into modules, quizzes and assessments.
 - Track completion, activity time and walkthrough progress.
 - Provide sales workout and coaching flows alongside product and process training.
@@ -128,5 +130,3 @@ Representative source: [public entry page](../index.php), [shop](../shop/index.p
 - **Integration code present:** application-side adapter, event handler or webhook is included; credentials and provider-side configuration are external.
 - **Historical change record:** migration and/or implementation notes document the build work; execution in a current environment is unverified.
 - **Runtime unverified:** current deployment, data, scheduled execution and external service health are not included in this public snapshot.
-
-
