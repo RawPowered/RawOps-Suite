@@ -2,6 +2,8 @@
 
 This guide covers the real, archived screen captures included with the public archive and the redaction standard used for them.
 
+The former live site is offline and business activity has ended. These preserved captures remain historical evidence. [Operating history and archive dates](../OPERATING-HISTORY.md).
+
 ## Included evidence
 
 The user provided a 193-image archive under the original project folder. Eleven genuine captures were selected, copied as fresh PNG files, redacted with solid black blocks where needed, and added to the [evidence gallery](GALLERY.md). The source originals remain outside this repository.

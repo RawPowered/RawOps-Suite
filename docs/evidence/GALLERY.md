@@ -2,6 +2,8 @@
 
 These are genuine captures from the local screen archive. Redactions use solid black rectangles. The source captures remain outside this repository.
 
+The former live site is offline and business activity has ended. These preserved captures remain historical evidence. [Operating history and archive dates](../OPERATING-HISTORY.md).
+
 ## Operating overview · 29 September 2025
 
 This dashboard capture shows user, account, lead, agent and training counters as they appeared in the historical filter window. Monetary values are obscured. The counts are a point-in-time operating snapshot and do not establish current activity, revenue or campaign performance.

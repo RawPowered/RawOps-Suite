@@ -12,7 +12,7 @@ I built RawOps Suite around the work of a product business: preparing agents, fi
 
 </div>
 
-**Project stage:** preserved history of a previously functional business system. The public archive combines de-identified source, genuine screenshots and firsthand usage context. Current deployment and provider connectivity have not been revalidated.
+**Project stage:** historical archive of a previously functional business system. Business activity and marketing have ended, and the former live site is offline. I retain the final working configuration privately. This public adaptation combines de-identified source, genuine screenshots and firsthand usage context. [Operating history and archive dates](docs/OPERATING-HISTORY.md).
 
 <h2 id="evidence"><img src="assets/brand/section-evidence.svg" alt="Start with the evidence" width="100%"></h2>
 

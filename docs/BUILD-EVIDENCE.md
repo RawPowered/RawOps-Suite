@@ -2,6 +2,10 @@
 
 This guide points to artifacts that can be reviewed in the public archive. It separates source evidence from live-use evidence.
 
+## Operating status
+
+Business activity and marketing have ended, and the former live site is offline. The final working configuration is retained privately. The available SQL export was generated November 20, 2025 and contains recorded sending through that date. It cannot establish a later business closure or site shutdown. [Operating history and review method](OPERATING-HISTORY.md).
+
 ## Evidence included
 
 | Evidence | What it supports | What it cannot establish |
